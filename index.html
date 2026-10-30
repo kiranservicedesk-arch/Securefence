@@ -1,26 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Premium Fencing Showroom</title>
-<meta name="description" content="Discover premium fencing, architectural gates, custom ironwork and luxury timber fencing by IronGuard & Timber.">
+<title>SECUREFENCE | Home 2 - Luxury Collection</title>
 
-<!-- Font Awesome: icons -->
- <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta name="description" content="Discover premium fencing, architectural gates, custom ironwork and luxury timber fencing by SecureFence.">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="main.css">
-<script src="main.js" defer></script>
-<link rel="icon" type="image/png" sizes="64x64" href="Images/Securelogo-removebg-preview.png">
+
+<link rel="icon" type="image/png" href="Images/Securelogo-removebg-preview.png">
 
 <style>
-/* ================= ROOT VARIABLES ================= */
-
 
 /* ================= HERO ================= */
+
 .hero-banner {
     position: relative;
     min-height: 550px;
@@ -161,6 +163,7 @@
 }
 
 /* ================= ABOUT ================= */
+
 .about-section {
     background: var(--soft-bg);
 }
@@ -184,6 +187,8 @@
     object-fit: cover;
     border-radius: 7px;
     border: 1px solid var(--accent-border);
+    position: relative;
+    z-index: 1;
 }
 
 .about-visual::after {
@@ -197,11 +202,6 @@
     border-bottom: 3px solid var(--gold-primary);
     pointer-events: none;
     z-index: 0;
-}
-
-.about-visual img {
-    position: relative;
-    z-index: 1;
 }
 
 .about-experience {
@@ -264,6 +264,7 @@
 }
 
 /* ================= PRODUCTS ================= */
+
 .products-section {
     background: var(--bg-dark);
 }
@@ -366,6 +367,7 @@
 }
 
 /* ================= SERVICES ================= */
+
 .services-section {
     background: var(--soft-bg);
 }
@@ -413,6 +415,7 @@
 }
 
 /* ================= WHY CHOOSE US ================= */
+
 .why-section {
     background: var(--bg-dark);
 }
@@ -453,6 +456,7 @@
 }
 
 /* ================= PROCESS ================= */
+
 .process-section {
     background: var(--soft-bg);
 }
@@ -491,6 +495,7 @@
 }
 
 /* ================= TESTIMONIALS ================= */
+
 .testimonials-section {
     background: var(--bg-dark);
 }
@@ -551,6 +556,7 @@
 }
 
 /* ================= BLOG ================= */
+
 .blog-section {
     background: var(--soft-bg);
 }
@@ -618,6 +624,7 @@
 }
 
 /* ================= CTA ================= */
+
 .cta-section {
     padding: 65px 0;
     background: var(--bg-dark);
@@ -632,7 +639,7 @@
     gap: 30px;
     padding: 45px;
     background:
-        linear-gradient(110deg, rgba(89, 89, 90, 0.98), rgba(81, 82, 83, 0.88)),
+        linear-gradient(110deg, rgba(89,89,90,.98), rgba(81,82,83,.88)),
         url("Images/fffff.jpg") center/cover;
     border: 1px solid var(--accent-border);
     border-radius: 7px;
@@ -659,6 +666,7 @@
 }
 
 /* ================= FOOTER ================= */
+
 .site-footer {
     padding: 70px 0 0;
     background: var(--footer-bg);
@@ -761,6 +769,7 @@
     border-radius: 4px;
     background: var(--gold-primary);
     color: #0b0f17;
+    cursor: pointer;
 }
 
 .footer-bottom {
@@ -790,6 +799,7 @@
 }
 
 /* ================= RTL SUPPORT ================= */
+
 html[dir="rtl"] body {
     direction: rtl;
 }
@@ -829,20 +839,79 @@ html[dir="rtl"] .footer-links a:hover {
     transform: translateX(-3px);
 }
 
-html[dir="rtl"] .hero-title,
-html[dir="rtl"] .hero-description,
-html[dir="rtl"] .about-content > p,
-html[dir="rtl"] .about-content .section-kicker {
-    text-align: start;
-}
-
 html[dir="rtl"] .hero-points i {
     margin-right: 0;
     margin-left: 6px;
 }
 
+html[dir="rtl"] .nav-menu {
+    direction: rtl;
+}
+
+html[dir="rtl"] .hero-grid,
+html[dir="rtl"] .about-grid {
+    direction: rtl;
+}
+
+html[dir="rtl"] .cta-box {
+    direction: rtl;
+}
+
+html[dir="rtl"] .footer-grid {
+    direction: rtl;
+}
+
+/* ================= THEME / RTL BUTTON FIX ================= */
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.control-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent-border);
+    border-radius: 5px;
+    background: var(--bg-card);
+    color: var(--gold-primary);
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.control-btn:hover {
+    background: var(--gold-primary);
+    color: #0b0f17;
+    border-color: var(--gold-primary);
+}
+
+#rtlToggle {
+    min-width: 45px;
+    padding: 0 9px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#themeIcon {
+    pointer-events: none;
+}
+
+#rtlText {
+    pointer-events: none;
+}
+
 /* ================= RESPONSIVE ================= */
+
 @media (max-width: 1050px) {
+
     .nav-menu {
         gap: 13px;
     }
@@ -874,6 +943,7 @@ html[dir="rtl"] .hero-points i {
 }
 
 @media (max-width: 800px) {
+
     .nav-wrapper,
     .header-actions .btn-login {
         display: none;
@@ -886,6 +956,10 @@ html[dir="rtl"] .hero-points i {
     .header-actions {
         display: flex;
         margin-inline-start: auto;
+    }
+
+    .header-controls {
+        display: flex;
     }
 
     .mobile-toggle {
@@ -917,10 +991,6 @@ html[dir="rtl"] .hero-points i {
         height: 370px;
     }
 
-    .about-grid {
-        gap: 35px;
-    }
-
     .product-grid,
     .services-grid,
     .testimonial-grid,
@@ -940,6 +1010,7 @@ html[dir="rtl"] .hero-points i {
 }
 
 @media (max-width: 560px) {
+
     .section {
         padding: 60px 0;
     }
@@ -1034,739 +1105,983 @@ html[dir="rtl"] .hero-points i {
         gap: 12px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= --> 
+<!-- ================= HEADER ================= -->
+
 <header class="site-header" id="siteHeader">
-    <div class="container header-container">
 
-        <a href="index.html" class="brand-logo" aria-label="SecureFence Home">
-            <div class="logo-icon">
-                <img src="Images/Securelogo-removebg-preview.png" height="50px" width="250px" alt="SecureFence Logo">
-            </div>
-            <div class="logo-text">
-                  SECUREFENCE
-                <span>REPAIR &amp; INSTALLATION</span>
-            </div>
-        </a>
+<div class="container header-container">
 
-        <div class="nav-wrapper">
-            <nav aria-label="Main navigation">
-                <ul class="nav-menu">
-                    <li class="home-dropdown" id="desktopHomeDropdown">
-                        <button class="home-dropdown-btn active" id="homeDropdownBtn" type="button"
-                                aria-expanded="false" aria-controls="desktopHomeMenu">
-                            Home <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
-                        </button>
-                        <ul class="home-dropdown-menu" id="desktopHomeMenu">
-                            <li>
-                                <a href="index.html">
-                                    <i class="fa-solid fa-house"></i> Home 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href="home2.html" aria-current="page">
-                                    <i class="fa-solid fa-house-chimney"></i> Home 2
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="products.html" class="nav-link">Products</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+<a href="index.html" class="brand-logo" aria-label="SecureFence Home">
 
-        <div class="header-actions">
-            <div class="header-controls">
-                <button class="control-btn" id="themeToggle" type="button"
-                        aria-label="Switch to light mode" title="Switch to light mode">
-                    <i class="fa-solid fa-sun" id="themeIcon" aria-hidden="true"></i>
-                </button>
+<div class="logo-icon">
+<img src="Images/Securelogo-removebg-preview.png"
+height="50" width="250" alt="SecureFence Logo">
+</div>
 
-                <button class="control-btn" id="rtlToggle" type="button"
-                        aria-label="Switch to right-to-left direction" title="Switch to RTL">
-                   <!--- <i class="fa-solid fa-right-left" aria-hidden="true"></i>-->
-                    <span id="rtlText">RTL</span>
-                </button>
-            </div>
+<div class="logo-text">
+SECUREFENCE
+<span>REPAIR &amp; INSTALLATION</span>
+</div>
 
-            <a href="login.html" class="btn-login">Login</a>
+</a>
 
-            <button class="mobile-toggle" id="mobileToggle" type="button"
-                    aria-label="Open navigation" aria-expanded="false"
-                    aria-controls="mobileMenu">
-                <i class="fa-solid fa-bars" id="mobileIcon" aria-hidden="true"></i>
-            </button>
-        </div>
-    </div>
+<div class="nav-wrapper">
+
+<nav aria-label="Main navigation">
+
+<ul class="nav-menu">
+
+<li class="home-dropdown" id="desktopHomeDropdown">
+
+<button class="home-dropdown-btn active"
+id="homeDropdownBtn"
+type="button"
+aria-expanded="false"
+aria-controls="desktopHomeMenu">
+
+Home <i class="fa-solid fa-chevron-down chevron"></i>
+
+</button>
+
+<ul class="home-dropdown-menu" id="desktopHomeMenu">
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Home 1
+</a>
+</li>
+
+<li>
+<a href="home2.html" aria-current="page">
+<i class="fa-solid fa-house-chimney"></i> Home 2
+</a>
+</li>
+
+</ul>
+</li>
+
+<li><a href="about.html" class="nav-link">About</a></li>
+<li><a href="products.html" class="nav-link">Products</a></li>
+<li><a href="services.html" class="nav-link">Services</a></li>
+<li><a href="blog.html" class="nav-link">Blog</a></li>
+<li><a href="contact.html" class="nav-link">Contact</a></li>
+
+</ul>
+
+</nav>
+</div>
+
+<div class="header-actions">
+
+<div class="header-controls">
+
+<button class="control-btn"
+id="themeToggle"
+type="button"
+aria-label="Switch to dark mode"
+title="Switch to dark mode">
+
+<i class="fa-solid fa-moon" id="themeIcon"></i>
+
+</button>
+
+<button class="control-btn"
+id="rtlToggle"
+type="button"
+aria-label="Switch to RTL"
+title="Switch to RTL">
+
+<span id="rtlText">RTL</span>
+
+</button>
+
+</div>
+
+<a href="login.html" class="btn-login">Login</a>
+
+<button class="mobile-toggle"
+id="mobileToggle"
+type="button"
+aria-label="Open navigation"
+aria-expanded="false"
+aria-controls="mobileMenu">
+
+<i class="fa-solid fa-bars" id="mobileIcon"></i>
+
+</button>
+
+</div>
+
+</div>
 </header>
 
 <!-- ================= MOBILE MENU ================= -->
+
 <div class="mobile-menu" id="mobileMenu">
-    <div class="container">
-        <nav aria-label="Mobile navigation">
-            <ul class="mobile-nav-list">
-                <li><a href="index.html">Home 1</a></li>
-                <li><a href="home2.html" aria-current="page">Home 2</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-    </div>
+
+<div class="container">
+
+<nav aria-label="Mobile navigation">
+
+<ul class="mobile-nav-list">
+
+<li><a href="index.html">Home 1</a></li>
+<li><a href="home2.html" aria-current="page">Home 2</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+
+</ul>
+</nav>
+</div>
 </div>
 
 <main>
 
 <!-- ================= HERO ================= -->
+
 <section class="hero-banner" id="home">
-    <div class="container">
-        <div class="hero-grid">
 
-            <div class="hero-visual">
-                <div class="visual-frame">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnHTJgWegaNxL4UjMPlr9b5x_BzYWsgTxJr5S-Besag&s=10"
-                         alt="Premium architectural fencing and ironwork"
-                         class="banner-image">
-                    <div class="floating-stat-card">
-                        <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
-                        <div>
-                            <div class="stat-number">5+ Years</div>
-                            <div class="stat-label">Master Craftsmanship</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container">
 
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    Premium Architectural Fencing
-                </div>
+<div class="hero-grid">
 
-                <h1 class="hero-title">
-                    Crafting Security,
-                    <span>Elevating Luxury.</span>
-                </h1>
+<div class="hero-visual">
 
-                <p class="hero-description">
-                    Step into the world of premium fencing and architectural
-                    craftsmanship. Discover custom-engineered wrought iron,
-                    sustainable hardwoods, elegant gates, and security systems
-                    designed to complement exceptional properties.
-                </p>
+<div class="visual-frame">
 
-                <div class="hero-actions">
-                    <a href="products.html" class="btn btn-primary">
-                        Explore Showroom <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="contact.html" class="btn btn-outline">
-                        <i class="fa-solid fa-calendar-check"></i> Book Consultation
-                    </a>
-                </div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnHTJgWegaNxL4UjMPlr9b5x_BzYWsgTxJr5S-Besag&s=10"
+alt="Premium architectural fencing and ironwork"
+class="banner-image">
 
-                <div class="hero-points">
-                    <span><i class="fa-solid fa-check-circle"></i> Custom Designs</span>
-                    <span><i class="fa-solid fa-check-circle"></i> Premium Materials</span>
-                    <span><i class="fa-solid fa-check-circle"></i> Expert Installation</span>
-                </div>
-            </div>
+<div class="floating-stat-card">
 
-        </div>
-    </div>
+<div class="stat-icon">
+<i class="fa-solid fa-award"></i>
+</div>
+
+<div>
+<div class="stat-number">5+ Years</div>
+<div class="stat-label">Master Craftsmanship</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="hero-content">
+
+<div class="hero-badge">
+<i class="fa-solid fa-shield-halved"></i>
+Premium Architectural Fencing
+</div>
+
+<h1 class="hero-title">
+Crafting Security,
+<span>Elevating Luxury.</span>
+</h1>
+
+<p class="hero-description">
+Step into the world of premium fencing and architectural
+craftsmanship. Discover custom-engineered wrought iron,
+sustainable hardwoods, elegant gates, and security systems
+designed to complement exceptional properties.
+</p>
+
+<div class="hero-actions">
+
+<a href="products.html" class="btn btn-primary">
+Explore Showroom <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+<a href="contact.html" class="btn btn-outline">
+<i class="fa-solid fa-calendar-check"></i> Book Consultation
+</a>
+
+</div>
+
+<div class="hero-points">
+<span><i class="fa-solid fa-check-circle"></i> Custom Designs</span>
+<span><i class="fa-solid fa-check-circle"></i> Premium Materials</span>
+<span><i class="fa-solid fa-check-circle"></i> Expert Installation</span>
+</div>
+
+</div>
+</div>
+</div>
 </section>
 
 <!-- ================= PRODUCTS ================= -->
+
 <section class="section products-section" id="products">
-    <div class="container">
-        <div class="section-heading">
-            <div class="section-kicker">Our Collection</div>
-            <h2 class="section-title">Explore Our Premium <span class="gold-text">Fencing Products</span></h2>
-            <p class="section-description">
-                Explore carefully selected fencing styles that combine durability,
-                architectural character, and refined design.
-            </p>
-        </div>
 
-        <div class="product-grid">
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDUDPrTLCvik5MwPNTlvg_Gv_c2z_TXyYrkqqd3yqA5g&s=10"
-                         alt="Decorative wrought iron fencing" loading="lazy">
-                    <span class="product-number">01</span>
-                </div>
-                <div class="product-info">
-                    <h3>Wrought Iron Fencing</h3>
-                    <p>Elegant metal fencing with distinctive details, robust construction, and timeless curb appeal.</p>
-                    <a href="products.html" class="text-link">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
+<div class="container">
 
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwchcbYLzEyR4oUoK6cRiGrmWMpxkjY6FMWxBHDpFAIg&s=10"
-                         alt="Natural hardwood privacy fencing" loading="lazy">
-                    <span class="product-number">02</span>
-                </div>
-                <div class="product-info">
-                    <h3>Luxury Timber Fencing</h3>
-                    <p>Natural textures and warm timber finishes for private gardens and beautifully designed homes.</p>
-                    <a href="products.html" class="text-link">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
+<div class="section-heading">
+<div class="section-kicker">Our Collection</div>
 
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMCTEZXHMNzhebxg4hYboxSyzQKWUmsTVuX5I8t8-BsQ&s=10"
-                         alt="Premium automated architectural entrance gate" loading="lazy">
-                    <span class="product-number">03</span>
-                </div>
-                <div class="product-info">
-                    <h3>Architectural Gates</h3>
-                    <p>Make a strong first impression with custom entrance gates designed around your property's architecture.</p>
-                    <a href="products.html" class="text-link">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </div>
+<h2 class="section-title">
+Explore Our Premium <span class="gold-text">Fencing Products</span>
+</h2>
 
-        <div style="text-align:center;margin-top:35px">
-            <a href="products.html" class="btn btn-outline">View All Products <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </div>
+<p class="section-description">
+Explore carefully selected fencing styles that combine durability,
+architectural character, and refined design.
+</p>
+</div>
+
+<div class="product-grid">
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDUDPrTLCvik5MwPNTlvg_Gv_c2z_TXyYrkqqd3yqA5g&s=10"
+alt="Decorative wrought iron fencing" loading="lazy">
+<span class="product-number">01</span>
+</div>
+
+<div class="product-info">
+<h3>Wrought Iron Fencing</h3>
+<p>Elegant metal fencing with distinctive details, robust construction, and timeless curb appeal.</p>
+<a href="products.html" class="text-link">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</article>
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwchcbYLzEyR4oUoK6cRiGrmWMpxkjY6FMWxBHDpFAIg&s=10"
+alt="Natural hardwood privacy fencing" loading="lazy">
+<span class="product-number">02</span>
+</div>
+
+<div class="product-info">
+<h3>Luxury Timber Fencing</h3>
+<p>Natural textures and warm timber finishes for private gardens and beautifully designed homes.</p>
+<a href="products.html" class="text-link">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</article>
+
+<article class="product-card">
+
+<div class="product-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMCTEZXHMNzhebxg4hYboxSyzQKWUmsTVuX5I8t8-BsQ&s=10"
+alt="Premium architectural entrance gate" loading="lazy">
+<span class="product-number">03</span>
+</div>
+
+<div class="product-info">
+<h3>Architectural Gates</h3>
+<p>Make a strong first impression with custom entrance gates designed around your property's architecture.</p>
+<a href="products.html" class="text-link">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</article>
+
+</div>
+
+<div style="text-align:center;margin-top:35px">
+<a href="products.html" class="btn btn-outline">
+View All Products <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+
+</div>
 </section>
 
 <!-- ================= SERVICES ================= -->
+
 <section class="section services-section" id="services">
-    <div class="container">
-        <div class="section-heading">
-            <div class="section-kicker">What We Do</div>
-            <h2 class="section-title">Complete Fencing <span class="gold-text">Solutions</span></h2>
-            <p class="section-description">From the first design consultation to the final installation, we help bring your fencing project to life.</p>
-        </div>
 
-        <div class="services-grid">
-            <article class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-                <h3>Custom Fence Design</h3>
-                <p>Personalised designs that complement your property's style, layout, privacy needs, and security goals.</p>
-                <a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
+<div class="container">
 
-            <article class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
-                <h3>Professional Installation</h3>
-                <p>Carefully planned installations focused on quality workmanship, alignment, stability, and finish.</p>
-                <a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
+<div class="section-heading">
+<div class="section-kicker">What We Do</div>
+<h2 class="section-title">Complete Fencing <span class="gold-text">Solutions</span></h2>
+<p class="section-description">From the first design consultation to the final installation, we help bring your fencing project to life.</p>
+</div>
 
-            <article class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <h3>Fence Repair</h3>
-                <p>Repair and restoration solutions to help keep existing fences and gates functional and presentable.</p>
-                <a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
+<div class="services-grid">
 
-            <article class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-door-closed"></i></div>
-                <h3>Gate Installation</h3>
-                <p>Stylish entry gates and practical access solutions designed for residential and commercial properties.</p>
-                <a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
+<article class="service-card">
+<div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+<h3>Custom Fence Design</h3>
+<p>Personalised designs that complement your property's style, layout, privacy needs, and security goals.</p>
+<a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+</article>
 
-            <article class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                <h3>Security Fencing</h3>
-                <p>Perimeter fencing options for clients who prioritise controlled access, privacy, and property protection.</p>
-                <a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
+<article class="service-card">
+<div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+<h3>Professional Installation</h3>
+<p>Carefully planned installations focused on quality workmanship, alignment, stability, and finish.</p>
+<a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+</article>
 
-            <article class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-                <h3>Gate Automation</h3>
-                <p>Ask our team about suitable automation options for convenient access and a more modern entrance.</p>
-                <a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-            </article>
-        </div>
-    </div>
+<article class="service-card">
+<div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+<h3>Fence Repair</h3>
+<p>Repair and restoration solutions to help keep existing fences and gates functional and presentable.</p>
+<a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+</article>
+
+<article class="service-card">
+<div class="service-icon"><i class="fa-solid fa-door-closed"></i></div>
+<h3>Gate Installation</h3>
+<p>Stylish entry gates and practical access solutions designed for residential and commercial properties.</p>
+<a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+</article>
+
+<article class="service-card">
+<div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+<h3>Security Fencing</h3>
+<p>Perimeter fencing options for clients who prioritise controlled access, privacy, and property protection.</p>
+<a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+</article>
+
+<article class="service-card">
+<div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+<h3>Gate Automation</h3>
+<p>Ask our team about suitable automation options for convenient access and a more modern entrance.</p>
+<a href="services.html" class="text-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+</article>
+
+</div>
+</div>
 </section>
 
 <!-- ================= WHY CHOOSE US ================= -->
-<section class="section why-section" id="why-us">
-    <div class="container">
-        <div class="section-heading">
-            <div class="section-kicker">The SECUREFENCE Difference</div>
-            <h2 class="section-title">Built Around Your <span class="gold-text">Expectations</span></h2>
-            <p class="section-description">Thoughtful design, quality materials, and a clear process help make your fencing project a smoother experience.</p>
-        </div>
 
-        <div class="why-grid">
-            <article class="why-card">
-                <i class="fa-solid fa-gem"></i>
-                <h3>Premium Materials</h3>
-                <p>Selected materials and finishes suited to your design and project needs.</p>
-            </article>
-            <article class="why-card">
-                <i class="fa-solid fa-ruler-combined"></i>
-                <h3>Tailored Solutions</h3>
-                <p>Design options shaped around your property, style, and practical requirements.</p>
-            </article>
-            <article class="why-card">
-                <i class="fa-solid fa-user-gear"></i>
-                <h3>Skilled Workmanship</h3>
-                <p>Careful planning and attention to detail at every stage of the project.</p>
-            </article>
-            <article class="why-card">
-                <i class="fa-solid fa-headset"></i>
-                <h3>Customer Support</h3>
-                <p>Clear communication and guidance from consultation through completion.</p>
-            </article>
-        </div>
-    </div>
+<section class="section why-section" id="why-us">
+
+<div class="container">
+
+<div class="section-heading">
+<div class="section-kicker">The SECUREFENCE Difference</div>
+<h2 class="section-title">Built Around Your <span class="gold-text">Expectations</span></h2>
+<p class="section-description">Thoughtful design, quality materials, and a clear process help make your fencing project a smoother experience.</p>
+</div>
+
+<div class="why-grid">
+
+<article class="why-card">
+<i class="fa-solid fa-gem"></i>
+<h3>Premium Materials</h3>
+<p>Selected materials and finishes suited to your design and project needs.</p>
+</article>
+
+<article class="why-card">
+<i class="fa-solid fa-ruler-combined"></i>
+<h3>Tailored Solutions</h3>
+<p>Design options shaped around your property, style, and practical requirements.</p>
+</article>
+
+<article class="why-card">
+<i class="fa-solid fa-user-gear"></i>
+<h3>Skilled Workmanship</h3>
+<p>Careful planning and attention to detail at every stage of the project.</p>
+</article>
+
+<article class="why-card">
+<i class="fa-solid fa-headset"></i>
+<h3>Customer Support</h3>
+<p>Clear communication and guidance from consultation through completion.</p>
+</article>
+
+</div>
+</div>
 </section>
 
 <!-- ================= PROCESS ================= -->
+
 <section class="section process-section" id="process">
-    <div class="container">
-        <div class="section-heading">
-            <div class="section-kicker">How It Works</div>
-            <h2 class="section-title">From First Idea to <span class="gold-text">Final Installation</span></h2>
-            <p class="section-description">Our straightforward process helps you understand each stage before your fencing project begins.</p>
-        </div>
 
-        <div class="process-grid">
-            <article class="process-card">
-                <div class="process-number">01</div>
-                <h3>Consultation</h3>
-                <p>Discuss your goals, preferred styles, site conditions, and budget.</p>
-            </article>
-            <article class="process-card">
-                <div class="process-number">02</div>
-                <h3>Design &amp; Quote</h3>
-                <p>Review suitable options, project details, and the proposed estimate.</p>
-            </article>
-            <article class="process-card">
-                <div class="process-number">03</div>
-                <h3>Craft &amp; Install</h3>
-                <p>Move forward with the agreed materials, preparation, and installation.</p>
-            </article>
-            <article class="process-card">
-                <div class="process-number">04</div>
-                <h3>Final Review</h3>
-                <p>Review the completed work and discuss care and maintenance guidance.</p>
-            </article>
-        </div>
+<div class="container">
 
-        <div style="text-align:center;margin-top:25px">
-            <a href="contact.html" class="btn btn-primary">Start Your Project <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </div>
+<div class="section-heading">
+<div class="section-kicker">How It Works</div>
+<h2 class="section-title">From First Idea to <span class="gold-text">Final Installation</span></h2>
+<p class="section-description">Our straightforward process helps you understand each stage before your fencing project begins.</p>
+</div>
+
+<div class="process-grid">
+
+<article class="process-card">
+<div class="process-number">01</div>
+<h3>Consultation</h3>
+<p>Discuss your goals, preferred styles, site conditions, and budget.</p>
+</article>
+
+<article class="process-card">
+<div class="process-number">02</div>
+<h3>Design &amp; Quote</h3>
+<p>Review suitable options, project details, and the proposed estimate.</p>
+</article>
+
+<article class="process-card">
+<div class="process-number">03</div>
+<h3>Craft &amp; Install</h3>
+<p>Move forward with the agreed materials, preparation, and installation.</p>
+</article>
+
+<article class="process-card">
+<div class="process-number">04</div>
+<h3>Final Review</h3>
+<p>Review the completed work and discuss care and maintenance guidance.</p>
+</article>
+
+</div>
+
+<div style="text-align:center;margin-top:25px">
+<a href="contact.html" class="btn btn-primary">Start Your Project <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
+
 <section class="section testimonials-section" id="testimonials">
-    <div class="container">
-        <div class="section-heading">
-            <div class="section-kicker">Client Experiences</div>
-            <h2 class="section-title">What Our Customers <span class="gold-text">Value Most</span></h2>
-            <p class="section-description">These sample testimonial cards show how customer feedback can be presented. Replace them with verified customer reviews.</p>
-        </div>
 
-        <div class="testimonial-grid">
-            <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p>"The design consultation helped us choose a fence that complemented our home. The attention to detail made the whole project feel well considered."</p>
-                <div class="testimonial-person">
-                    <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
-                    <div><h4>Residential Client</h4><span>Custom Fencing Project</span></div>
-                </div>
-            </article>
+<div class="container">
 
-            <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p>"We appreciated the clear explanation of the available materials and styles. It was easier to compare the options and plan our entrance."</p>
-                <div class="testimonial-person">
-                    <div class="testimonial-avatar"><i class="fa-solid fa-user-tie"></i></div>
-                    <div><h4>Property Owner</h4><span>Architectural Gate Project</span></div>
-                </div>
-            </article>
+<div class="section-heading">
+<div class="section-kicker">Client Experiences</div>
+<h2 class="section-title">What Our Customers <span class="gold-text">Value Most</span></h2>
+<p class="section-description">These sample testimonial cards show how customer feedback can be presented. Replace them with verified customer reviews.</p>
+</div>
 
-            <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p>"The team helped us understand our repair options and choose a practical solution for our property's existing fence."</p>
-                <div class="testimonial-person">
-                    <div class="testimonial-avatar"><i class="fa-solid fa-user-gear"></i></div>
-                    <div><h4>Homeowner</h4><span>Fence Repair Project</span></div>
-                </div>
-            </article>
-        </div>
-    </div>
+<div class="testimonial-grid">
+
+<article class="testimonial-card">
+<div class="testimonial-stars" aria-label="5 out of 5 stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p>"The design consultation helped us choose a fence that complemented our home. The attention to detail made the whole project feel well considered."</p>
+<div class="testimonial-person">
+<div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+<div><h4>Residential Client</h4><span>Custom Fencing Project</span></div>
+</div>
+</article>
+
+<article class="testimonial-card">
+<div class="testimonial-stars" aria-label="5 out of 5 stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p>"We appreciated the clear explanation of the available materials and styles. It was easier to compare the options and plan our entrance."</p>
+<div class="testimonial-person">
+<div class="testimonial-avatar"><i class="fa-solid fa-user-tie"></i></div>
+<div><h4>Property Owner</h4><span>Architectural Gate Project</span></div>
+</div>
+</article>
+
+<article class="testimonial-card">
+<div class="testimonial-stars" aria-label="5 out of 5 stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p>"The team helped us understand our repair options and choose a practical solution for our property's existing fence."</p>
+<div class="testimonial-person">
+<div class="testimonial-avatar"><i class="fa-solid fa-user-gear"></i></div>
+<div><h4>Homeowner</h4><span>Fence Repair Project</span></div>
+</div>
+</article>
+
+</div>
+</div>
 </section>
 
 <!-- ================= BLOG ================= -->
+
 <section class="section blog-section" id="blog">
-    <div class="container">
-        <div class="section-heading">
-            <div class="section-kicker">Ideas &amp; Inspiration</div>
-            <h2 class="section-title">Explore Our Latest <span class="gold-text">Design Insights</span></h2>
-            <p class="section-description">Learn about fencing styles, materials, maintenance, and ways to create a distinctive property entrance.</p>
-        </div>
 
-        <div class="blog-grid">
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnomcPvVDXRPD0rD32AiBqfCBNjrC3yFo0w8srVuxyhA&s=10" alt="Modern fencing design inspiration" loading="lazy">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Design Guide</span><span><i class="fa-regular fa-clock"></i> 5 Min Read</span></div>
-                    <h3>Choosing a Fence That Complements Your Architecture</h3>
-                    <p>Explore the relationship between fence height, material, colour, and the style of your property.</p>
-                    <a href="blog.html" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
+<div class="container">
 
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="https://cdn.prod.website-files.com/63ec734487e69f1cc0fcd3f8/677fbceb76d4ce412a7a1575_download%20(1).jpg" alt="Timber fence materials and maintenance" loading="lazy">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Maintenance</span><span><i class="fa-regular fa-clock"></i> 4 Min Read</span></div>
-                    <h3>How to Maintain the Beauty of Timber Fencing</h3>
-                    <p>Learn about cleaning, protective finishes, and regular inspections for outdoor timber fences.</p>
-                    <a href="blog.html" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
+<div class="section-heading">
+<div class="section-kicker">Ideas &amp; Inspiration</div>
+<h2 class="section-title">Explore Our Latest <span class="gold-text">Design Insights</span></h2>
+<p class="section-description">Learn about fencing styles, materials, maintenance, and ways to create a distinctive property entrance.</p>
+</div>
 
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzOUYswkuJ_DgDsmLIfZEdTKwG3GOsm7kBLLds4Q0i1g&s" alt="Secure architectural entrance gate" loading="lazy">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Security</span><span><i class="fa-regular fa-clock"></i> 6 Min Read</span></div>
-                    <h3>What to Consider When Planning a Secure Entrance</h3>
-                    <p>Understand how access requirements, gate design, and fencing work together around your property.</p>
-                    <a href="blog.html" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </div>
+<div class="blog-grid">
 
-        <div style="text-align:center;margin-top:35px">
-            <a href="blog.html" class="btn btn-outline">Explore All Articles <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </div>
+<article class="blog-card">
+<div class="blog-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnomcPvVDXRPD0rD32AiBqfCBNjrC3yFo0w8srVuxyhA&s=10" alt="Modern fencing design inspiration" loading="lazy">
+</div>
+<div class="blog-content">
+<div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Design Guide</span><span><i class="fa-regular fa-clock"></i> 5 Min Read</span></div>
+<h3>Choosing a Fence That Complements Your Architecture</h3>
+<p>Explore the relationship between fence height, material, colour, and the style of your property.</p>
+<a href="blog.html" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="blog-card">
+<div class="blog-image">
+<img src="https://cdn.prod.website-files.com/63ec734487e69f1cc0fcd3f8/677fbceb76d4ce412a7a1575_download%20(1).jpg" alt="Timber fence materials and maintenance" loading="lazy">
+</div>
+<div class="blog-content">
+<div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Maintenance</span><span><i class="fa-regular fa-clock"></i> 4 Min Read</span></div>
+<h3>How to Maintain the Beauty of Timber Fencing</h3>
+<p>Learn about cleaning, protective finishes, and regular inspections for outdoor timber fences.</p>
+<a href="blog.html" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="blog-card">
+<div class="blog-image">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzOUYswkuJ_DgDsmLIfZEdTKwG3GOsm7kBLLds4Q0i1g&s" alt="Secure architectural entrance gate" loading="lazy">
+</div>
+<div class="blog-content">
+<div class="blog-meta"><span><i class="fa-regular fa-calendar"></i> Security</span><span><i class="fa-regular fa-clock"></i> 6 Min Read</span></div>
+<h3>What to Consider When Planning a Secure Entrance</h3>
+<p>Understand how access requirements, gate design, and fencing work together around your property.</p>
+<a href="blog.html" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+</div>
+
+<div style="text-align:center;margin-top:35px">
+<a href="blog.html" class="btn btn-outline">Explore All Articles <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
 </section>
 
 <!-- ================= CTA ================= -->
+
 <section class="cta-section">
-    <div class="container">
-        <div class="cta-box">
-            <div>
-                <div class="section-kicker">Your Property, Your Vision</div>
-                <h2>Let's Create Something Exceptional.</h2>
-                <p>Tell us about your fencing project and explore solutions tailored to your property's design, privacy requirements, and security needs.</p>
-            </div>
-            <div class="cta-actions">
-                <a href="contact.html" class="btn btn-primary">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="products.html" class="btn btn-outline">Browse Products</a>
-            </div>
-        </div>
-    </div>
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+<div class="section-kicker">Your Property, Your Vision</div>
+<h2>Let's Create Something Exceptional.</h2>
+<p>Tell us about your fencing project and explore solutions tailored to your property's design, privacy requirements, and security needs.</p>
+</div>
+
+<div class="cta-actions">
+<a href="contact.html" class="btn btn-primary">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+<a href="products.html" class="btn btn-outline">Browse Products</a>
+</div>
+
+</div>
+</div>
 </section>
 
 </main>
 
 <!-- ================= FOOTER ================= -->
+
 <footer class="site-footer" id="footer">
-    <div class="container">
-        <div class="footer-grid">
 
-            <div class="footer-brand">
-                <a href="index.html" class="brand-logo">
-                    <div class="logo-icon">
-                        <img src="Images/Securelogo-removebg-preview.png">
-                    </div>
-                    <div class="logo-text">SECUREFENCE<span>REPAIR & INSTALLATION</span></div>
-                </a>
+<div class="container">
 
-                <p>Setting the standard for bespoke architectural gates, premium fencing, and thoughtful perimeter solutions. Discover the right style for your property.</p>
+<div class="footer-grid">
 
-                <div class="social-links">
-                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                </div>
-            </div>
+<div class="footer-brand">
 
-            <div>
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home 1</a></li>
-                   <!--- <li><a href="home2.html"><i class="fa-solid fa-chevron-right"></i> Home 2</a></li>-->
-                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> Our Products</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Our Services</a></li>
-                    <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Latest Blogs</a></li>
-                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-                </ul>
-            </div>
+<a href="index.html" class="brand-logo">
 
-            <div>
-                <h4 class="footer-heading">Our Services</h4>
-                <ul class="footer-links">
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Custom Iron Fabrication</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Hardwood Fencing</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Gate Installation</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Gate Automation</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Fence Repair</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Security Fencing</a></li>
-                </ul>
-            </div>
+<div class="logo-icon">
+<img src="Images/Securelogo-removebg-preview.png" alt="SecureFence Logo">
+</div>
 
-            <div class="footer-newsletter">
-                <h4 class="footer-heading">Showroom Newsletter</h4>
-                <p>Subscribe to receive fencing design ideas, maintenance guides, and updates from our showroom.</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" name="email" placeholder="Your email address"
-                           class="newsletter-input" aria-label="Your email address"
-                           autocomplete="email" required>
-                    <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
+<div class="logo-text">
+SECUREFENCE
+<span>REPAIR &amp; INSTALLATION</span>
+</div>
 
-        </div>
+</a>
 
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear"></span> IronGuard &amp; Timber Showroom. All Rights Reserved.</p>
-            <div class="legal-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="warranty.html">Warranty Information</a>
-            </div>
-        </div>
-    </div>
+<p>Setting the standard for bespoke architectural gates, premium fencing, and thoughtful perimeter solutions. Discover the right style for your property.</p>
+
+<div class="social-links">
+<a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+</div>
+
+</div>
+
+<div>
+<h4 class="footer-heading">Quick Links</h4>
+<ul class="footer-links">
+<li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home 1</a></li>
+<li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+<li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> Our Products</a></li>
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Our Services</a></li>
+<li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Latest Blogs</a></li>
+<li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+</ul>
+</div>
+
+<div>
+<h4 class="footer-heading">Our Services</h4>
+<ul class="footer-links">
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Custom Iron Fabrication</a></li>
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Hardwood Fencing</a></li>
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Gate Installation</a></li>
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Gate Automation</a></li>
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Fence Repair</a></li>
+<li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Security Fencing</a></li>
+</ul>
+</div>
+
+<div class="footer-newsletter">
+
+<h4 class="footer-heading">Showroom Newsletter</h4>
+
+<p>Subscribe to receive fencing design ideas, maintenance guides, and updates from our showroom.</p>
+
+<form class="newsletter-form" id="newsletterForm">
+
+<input type="email"
+name="email"
+placeholder="Your email address"
+class="newsletter-input"
+aria-label="Your email address"
+autocomplete="email"
+required>
+
+<button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
+<i class="fa-solid fa-paper-plane"></i>
+</button>
+
+</form>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>&copy; <span id="currentYear"></span> SecureFence. All Rights Reserved.</p>
+
+<div class="legal-links">
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+<a href="warranty.html">Warranty Information</a>
+</div>
+
+</div>
+</div>
 </footer>
 
 <!-- ================= JAVASCRIPT ================= -->
+
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
-    const htmlRoot = document.documentElement;
 
-    /* COPYRIGHT YEAR */
-    const currentYear = document.getElementById("currentYear");
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
+"use strict";
 
-    /* DARK / LIGHT MODE */
-    const themeToggle = document.getElementById("themeToggle");
-    const themeIcon = document.getElementById("themeIcon");
+const htmlRoot = document.documentElement;
 
-    function updateThemeButton() {
-        const isDark = htmlRoot.getAttribute("data-theme") === "dark";
+/* ================= COPYRIGHT YEAR ================= */
 
-        if (themeIcon) {
-            themeIcon.className = isDark
-                ? "fa-solid fa-sun"
-                : "fa-solid fa-moon";
-        }
+const currentYear = document.getElementById("currentYear");
 
-        if (themeToggle) {
-            themeToggle.setAttribute(
-                "aria-label",
-                isDark ? "Switch to light mode" : "Switch to dark mode"
-            );
-            themeToggle.title = isDark
-                ? "Switch to light mode"
-                : "Switch to dark mode";
-        }
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+/* ================= DARK / LIGHT MODE ================= */
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+function updateThemeButton() {
+
+    const isDark = htmlRoot.getAttribute("data-theme") === "dark";
+
+    if (themeIcon) {
+        themeIcon.className = isDark
+            ? "fa-solid fa-sun"
+            : "fa-solid fa-moon";
     }
 
     if (themeToggle) {
-        themeToggle.addEventListener("click", function () {
-            const isDark = htmlRoot.getAttribute("data-theme") === "dark";
-            htmlRoot.setAttribute("data-theme", isDark ? "light" : "dark");
-            updateThemeButton();
-        });
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        themeToggle.title = isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode";
     }
+}
 
-    updateThemeButton();
+if (themeToggle) {
 
-    /* RTL / LTR */
-    const rtlToggle = document.getElementById("rtlToggle");
-    const rtlText = document.getElementById("rtlText");
+    themeToggle.addEventListener("click", function () {
 
-    function updateDirectionButton() {
-        const isRTL = htmlRoot.getAttribute("dir") === "rtl";
+        const currentTheme = htmlRoot.getAttribute("data-theme");
 
-        if (rtlText) {
-            rtlText.textContent = isRTL ? "LTR" : "RTL";
-        }
+        const newTheme = currentTheme === "dark"
+            ? "light"
+            : "dark";
 
-        if (rtlToggle) {
-            rtlToggle.setAttribute(
-                "aria-label",
-                isRTL
-                    ? "Switch to left-to-right direction"
-                    : "Switch to right-to-left direction"
-            );
-            rtlToggle.title = isRTL ? "Switch to LTR" : "Switch to RTL";
-        }
+        htmlRoot.setAttribute("data-theme", newTheme);
+
+        updateThemeButton();
+
+    });
+}
+
+updateThemeButton();
+
+/* ================= RTL / LTR ================= */
+
+const rtlToggle = document.getElementById("rtlToggle");
+const rtlText = document.getElementById("rtlText");
+
+function updateDirectionButton() {
+
+    const isRTL = htmlRoot.getAttribute("dir") === "rtl";
+
+    if (rtlText) {
+        rtlText.textContent = isRTL ? "LTR" : "RTL";
     }
 
     if (rtlToggle) {
-        rtlToggle.addEventListener("click", function () {
-            const isRTL = htmlRoot.getAttribute("dir") === "rtl";
-            htmlRoot.setAttribute("dir", isRTL ? "ltr" : "rtl");
-            updateDirectionButton();
-        });
+
+        rtlToggle.setAttribute(
+            "aria-label",
+            isRTL
+                ? "Switch to left-to-right direction"
+                : "Switch to right-to-left direction"
+        );
+
+        rtlToggle.title = isRTL
+            ? "Switch to LTR"
+            : "Switch to RTL";
     }
+}
 
-    updateDirectionButton();
+if (rtlToggle) {
 
-    /* HEADER SCROLL EFFECT */
-    const siteHeader = document.getElementById("siteHeader");
+    rtlToggle.addEventListener("click", function () {
 
-    function updateHeaderScroll() {
-        if (siteHeader) {
-            siteHeader.classList.toggle("scrolled", window.scrollY > 30);
-        }
-    }
+        const currentDirection = htmlRoot.getAttribute("dir");
 
-    window.addEventListener("scroll", updateHeaderScroll, { passive: true });
-    updateHeaderScroll();
+        const newDirection = currentDirection === "rtl"
+            ? "ltr"
+            : "rtl";
 
-    /* HOME DROPDOWN */
-    const desktopDropdown = document.getElementById("desktopHomeDropdown");
-    const desktopDropdownButton = document.getElementById("homeDropdownBtn");
+        htmlRoot.setAttribute("dir", newDirection);
 
-    function closeAllDropdowns() {
-        document.querySelectorAll(".home-dropdown").forEach(function (item) {
-            item.classList.remove("open");
-            const button = item.querySelector(".home-dropdown-btn");
-            if (button) {
-                button.setAttribute("aria-expanded", "false");
-            }
-        });
-    }
+        updateDirectionButton();
 
-    if (desktopDropdown && desktopDropdownButton) {
-        desktopDropdownButton.addEventListener("click", function (event) {
-            event.stopPropagation();
-
-            const shouldOpen = !desktopDropdown.classList.contains("open");
-            closeAllDropdowns();
-
-            if (shouldOpen) {
-                desktopDropdown.classList.add("open");
-                desktopDropdownButton.setAttribute("aria-expanded", "true");
-            }
-        });
-    }
-
-    document.addEventListener("click", function (event) {
-        if (event.target instanceof Element &&
-            !event.target.closest(".home-dropdown")) {
-            closeAllDropdowns();
-        }
     });
+}
 
-    /* MOBILE NAVIGATION */
-    const mobileToggle = document.getElementById("mobileToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mobileIcon = document.getElementById("mobileIcon");
+updateDirectionButton();
 
-    function closeMobileMenu() {
-        if (mobileMenu) {
-            mobileMenu.classList.remove("show");
+/* ================= HEADER SCROLL EFFECT ================= */
+
+const siteHeader = document.getElementById("siteHeader");
+
+function updateHeaderScroll() {
+
+    if (siteHeader) {
+        siteHeader.classList.toggle(
+            "scrolled",
+            window.scrollY > 30
+        );
+    }
+}
+
+window.addEventListener("scroll", updateHeaderScroll, {
+    passive: true
+});
+
+updateHeaderScroll();
+
+/* ================= HOME DROPDOWN ================= */
+
+const desktopDropdown = document.getElementById("desktopHomeDropdown");
+const desktopDropdownButton = document.getElementById("homeDropdownBtn");
+
+function closeAllDropdowns() {
+
+    document.querySelectorAll(".home-dropdown").forEach(function (item) {
+
+        item.classList.remove("open");
+
+        const button = item.querySelector(".home-dropdown-btn");
+
+        if (button) {
+            button.setAttribute("aria-expanded", "false");
         }
 
-        if (mobileToggle) {
-            mobileToggle.setAttribute("aria-expanded", "false");
-            mobileToggle.setAttribute("aria-label", "Open navigation");
+    });
+}
+
+if (desktopDropdown && desktopDropdownButton) {
+
+    desktopDropdownButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        const shouldOpen = !desktopDropdown.classList.contains("open");
+
+        closeAllDropdowns();
+
+        if (shouldOpen) {
+
+            desktopDropdown.classList.add("open");
+
+            desktopDropdownButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
         }
+
+    });
+}
+
+document.addEventListener("click", function (event) {
+
+    if (
+        event.target instanceof Element &&
+        !event.target.closest(".home-dropdown")
+    ) {
+        closeAllDropdowns();
+    }
+
+});
+
+/* ================= MOBILE NAVIGATION ================= */
+
+const mobileToggle = document.getElementById("mobileToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileIcon = document.getElementById("mobileIcon");
+
+function closeMobileMenu() {
+
+    if (mobileMenu) {
+        mobileMenu.classList.remove("show");
+    }
+
+    if (mobileToggle) {
+
+        mobileToggle.setAttribute("aria-expanded", "false");
+
+        mobileToggle.setAttribute(
+            "aria-label",
+            "Open navigation"
+        );
+    }
+
+    if (mobileIcon) {
+        mobileIcon.className = "fa-solid fa-bars";
+    }
+}
+
+if (mobileToggle && mobileMenu) {
+
+    mobileToggle.addEventListener("click", function () {
+
+        const isOpen = mobileMenu.classList.toggle("show");
+
+        mobileToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        mobileToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
 
         if (mobileIcon) {
-            mobileIcon.className = "fa-solid fa-bars";
+
+            mobileIcon.className = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars";
         }
-    }
 
-    if (mobileToggle && mobileMenu) {
-        mobileToggle.addEventListener("click", function () {
-            const isOpen = mobileMenu.classList.toggle("show");
-
-            mobileToggle.setAttribute("aria-expanded", String(isOpen));
-            mobileToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Close navigation" : "Open navigation"
-            );
-
-            if (mobileIcon) {
-                mobileIcon.className = isOpen
-                    ? "fa-solid fa-xmark"
-                    : "fa-solid fa-bars";
-            }
-
-            if (!isOpen) {
-                closeAllDropdowns();
-            }
-        });
-
-        mobileMenu.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                closeMobileMenu();
-                closeAllDropdowns();
-            });
-        });
-    }
-
-    /* ESC KEY CLOSES MENUS */
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
+        if (!isOpen) {
             closeAllDropdowns();
-            closeMobileMenu();
         }
+
     });
 
-    /* NEWSLETTER DEMO */
-    const newsletterForm = document.getElementById("newsletterForm");
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
 
-    if (newsletterForm) {
-        newsletterForm.addEventListener("submit", function (event) {
-            event.preventDefault();
+        link.addEventListener("click", function () {
 
-            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            closeMobileMenu();
+            closeAllDropdowns();
 
-            if (!emailInput || !emailInput.checkValidity()) {
-                if (emailInput) emailInput.reportValidity();
-                return;
+        });
+
+    });
+}
+
+/* ================= ESC KEY ================= */
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        closeAllDropdowns();
+        closeMobileMenu();
+
+    }
+
+});
+
+/* ================= NEWSLETTER ================= */
+
+const newsletterForm = document.getElementById("newsletterForm");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const emailInput = newsletterForm.querySelector(
+            'input[type="email"]'
+        );
+
+        if (!emailInput || !emailInput.checkValidity()) {
+
+            if (emailInput) {
+                emailInput.reportValidity();
             }
 
-            alert(
-                "Thank you for your interest! Newsletter delivery needs to be connected to a mailing service."
-            );
+            return;
+        }
 
-            newsletterForm.reset();
-        });
-    }
+        alert(
+            "Thank you for your interest! Newsletter delivery needs to be connected to a mailing service."
+        );
+
+        newsletterForm.reset();
+
+    });
+}
+
 });
+
 </script>
 
 </body>
