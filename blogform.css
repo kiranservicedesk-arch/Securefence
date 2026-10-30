@@ -1,0 +1,251 @@
+/* ==========================================
+   SECUREFENCE - CONSULTATION FORM
+========================================== */
+
+:root {
+    --body-bg: #ffffff;
+    --text-color: #263746;
+    --heading-color: #142b3b;
+    --section-bg: #f3f7f4;
+    --input-bg: #ffffff;
+    --input-text: #263746;
+    --placeholder-color: #9aa6ae;
+    --border-color: #dce6e1;
+    --primary-color: #23865b;
+    --primary-hover: #176b46;
+    --button-text: #ffffff;
+    --shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* DARK MODE */
+
+html[data-theme="dark"] {
+    --body-bg: #101820;
+    --text-color: #cbd5df;
+    --heading-color: #f1f5f9;
+    --section-bg: #1b2a32;
+    --input-bg: #182630;
+    --input-text: #f1f5f9;
+    --placeholder-color: #94a3b0;
+    --border-color: #40545f;
+    --primary-color: #2eaa76;
+    --primary-hover: #23865b;
+    --button-text: #ffffff;
+    --shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--body-bg);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* CONSULTATION SECTION */
+
+.consultation-section {
+    width: 100%;
+    padding: 55px 20px 65px;
+    background: var(--section-bg);
+    transition: background 0.3s ease;
+}
+
+.consultation-container {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* HEADING */
+
+.consultation-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.consultation-heading h2 {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--heading-color);
+    margin-bottom: 8px;
+}
+
+.consultation-heading p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* FORM */
+
+.consultation-form {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-group input,
+.form-group textarea,
+.phone-group input,
+.phone-group select {
+    width: 100%;
+    display: block;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--input-text);
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+/* INPUT FIELDS */
+
+.form-group input {
+    height: 56px;
+    padding: 0 18px;
+}
+
+.form-group textarea {
+    min-height: 105px;
+    padding: 15px 18px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* PHONE FIELD */
+
+.phone-group {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.phone-group select {
+    height: 56px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.phone-group input {
+    height: 56px;
+    padding: 0 18px;
+    min-width: 0;
+}
+
+/* PLACEHOLDER */
+
+.consultation-form input::placeholder,
+.consultation-form textarea::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+
+/* FOCUS EFFECT */
+
+.consultation-form input:focus,
+.consultation-form textarea:focus,
+.consultation-form select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(35, 134, 91, 0.12);
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+    min-height: 58px;
+    margin-top: 2px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color);
+    color: var(--button-text);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.25s ease;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
+/* PRIVACY NOTE */
+
+.privacy-note {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.75;
+}
+
+/* FORM MESSAGE */
+
+.form-message {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .consultation-section {
+        padding: 40px 16px 45px;
+    }
+
+    .consultation-heading {
+        margin-bottom: 28px;
+    }
+
+    .consultation-heading h2 {
+        font-size: 24px;
+    }
+
+    .consultation-heading p {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .phone-group input,
+    .phone-group select {
+        height: 52px;
+    }
+
+    .phone-group {
+        grid-template-columns: 95px minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .submit-btn {
+        min-height: 52px;
+    }
+}

@@ -1,0 +1,1222 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Premium Fencing Services</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="icon" type="image/png" sizes="64x64" href="Images/Securelogo-removebg-preview.png">
+
+<style>
+
+
+/* ================= SERVICES HERO ================= */
+
+/* ================= SERVICES HERO ================= */
+.services-hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+.services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(51, 75, 110, 0.94) 0%,
+            rgba(237, 238, 240, 0.76) 48%,
+            rgba(9, 73, 201, 0.2) 100%
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwy9OgzqCu07ks8613Ai4r3OR4ddTseGKeJv0glJp9ng&s=10")
+        center/cover;
+    animation: heroZoom 14s ease-in-out infinite alternate;
+}
+
+.services-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 110px;
+    background: linear-gradient(transparent, var(--bg-dark));
+    z-index: -1;
+}
+
+.services-hero-content {
+    max-width: 760px;
+    padding: 90px 0 115px;
+    animation: heroTextIn .9s ease both;
+}
+
+.services-hero h1 {
+    font: 700 clamp(38px,5.6vw,72px)/1.12 var(--font-heading);
+    color: var(--text-light);
+    margin: 15px 0 22px;
+    letter-spacing: -.8px;
+}
+
+.services-hero p {
+    max-width: 620px;
+    color: #d2d8e1;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.services-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* ================= SERVICES SECTION ================= */
+.services-section {
+    padding: 86px 0;
+}
+
+.section-heading h2 {
+    font: 700 clamp(28px,3.5vw,43px)/1.25 var(--font-heading);
+    color: var(--text-light);
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ================= SERVICE CARDS ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 24px;
+}
+
+.service-card {
+    height: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--accent-border);
+    border-radius: 7px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold-primary);
+    box-shadow: var(--shadow);
+}
+
+.card-image-wrap {
+    height: 225px;
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .65s ease;
+}
+
+.service-card:hover .card-image {
+    transform: scale(1.06);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--accent-border);
+    background: var(--soft-bg);
+    color: var(--gold-primary);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+
+.card-content h3 {
+    font: 700 19px/1.4 var(--font-heading);
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    min-height: 76px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.text-link {
+    display: inline-flex;
+    gap: 9px;
+    align-items: center;
+    color: var(--gold-primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.text-link i {
+    transition: transform .3s;
+}
+
+.text-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ================= FEATURE SECTION ================= */
+.feature-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--accent-border);
+    border-bottom: 1px solid var(--accent-border);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.feature-image {
+    min-height: 420px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-dark);
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform .7s ease;
+}
+
+.feature-image:hover img {
+    transform: scale(1.06);
+}
+
+.feature-copy h2 {
+    font: 700 clamp(28px,3vw,42px)/1.25 var(--font-heading);
+    color: var(--text-light);
+    margin: 14px 0 18px;
+}
+
+.feature-copy > p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 24px;
+}
+
+.feature-list {
+    display: grid;
+    gap: 15px;
+    margin: 25px 0 30px;
+}
+
+.feature-list li {
+    display: flex;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 13px;
+    align-items: flex-start;
+}
+
+.feature-list i {
+    color: var(--gold-primary);
+    margin-top: 5px;
+}
+
+/* ================= PROCESS ================= */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 20px;
+}
+
+.process-step {
+    padding: 26px 22px;
+    border: 1px solid var(--accent-border);
+    background: var(--bg-card);
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold-primary);
+}
+
+.process-number {
+    font: 700 36px/1 var(--font-heading);
+    color: var(--gold-primary);
+    margin-bottom: 22px;
+}
+
+.process-step h3 {
+    font: 700 17px var(--font-heading);
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.process-step p {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* ================= PROJECT GALLERY ================= */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 18px;
+}
+
+.project-tile {
+    height: 300px;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-card);
+}
+
+.project-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .65s ease;
+}
+
+.project-tile:hover img {
+    transform: scale(1.08);
+}
+
+.project-tile::after {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    background: linear-gradient(transparent,rgba(5,8,13,.88));
+}
+
+.project-caption {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.project-caption span {
+    color: var(--gold-light);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.project-caption h3 {
+    color: #fff;
+    font: 700 19px var(--font-heading);
+    margin-top: 5px;
+}
+
+/* ================= CTA ================= */
+.services-cta {
+    padding: 70px 0;
+    background:
+        linear-gradient(120deg,rgba(212,175,55,.14),transparent 60%),
+        var(--bg-card);
+    border-top: 1px solid var(--accent-border);
+    border-bottom: 1px solid var(--accent-border);
+}
+
+.cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta-inner h2 {
+    font: 700 clamp(27px,3.2vw,40px)/1.25 var(--font-heading);
+    color: var(--text-light);
+    margin: 10px 0;
+}
+
+.cta-inner p {
+    color: var(--text-muted);
+    max-width: 660px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* ================= SERVICES ANIMATIONS ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: .12s;
+}
+
+.reveal-delay-2 {
+    transition-delay: .24s;
+}
+
+.reveal-delay-3 {
+    transition-delay: .36s;
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+}
+
+@keyframes heroTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= SERVICES RTL ================= */
+html[dir="rtl"] .text-link:hover i {
+    transform: translateX(-5px);
+}
+
+html[dir="rtl"] .services-hero::before {
+    background:
+        linear-gradient(
+            270deg,
+            rgba(7,10,15,.94) 0%,
+            rgba(7,10,15,.76) 48%,
+            rgba(7,10,15,.2) 100%
+        ),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+}
+
+html[dir="rtl"] .project-caption {
+    text-align: right;
+}
+
+/* ================= SERVICES RESPONSIVE ================= */
+@media (max-width: 950px) {
+    .services-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .feature-grid {
+        gap: 32px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .project-tile:first-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 620px) {
+    .services-hero {
+        min-height: 510px;
+    }
+
+    .services-hero-content {
+        padding: 70px 0 95px;
+    }
+
+    .services-hero h1 {
+        font-size: clamp(36px,9vw,53px);
+    }
+
+    .services-hero p {
+        font-size: 13px;
+    }
+
+    .services-hero-actions {
+        gap: 10px;
+    }
+
+    .services-section {
+        padding: 65px 0;
+    }
+
+    .services-grid,
+    .feature-grid,
+    .process-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-tile:first-child {
+        grid-column: auto;
+    }
+
+    .project-tile {
+        height: 260px;
+    }
+
+    .feature-image,
+    .feature-image img {
+        min-height: 300px;
+    }
+
+    .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-hero::before,
+    .services-hero-content,
+    .reveal,
+    .service-card,
+    .card-image,
+    .feature-image img,
+    .process-step,
+    .project-tile img {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+ <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="SecureFence Home">
+                <div class="logo-icon">
+                    <img src="Images/Securelogo-removebg-preview.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    SECUREFENCE
+                    <span>REPAIR & INSTALLATION</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION -->
+            <div class="nav-wrapper">
+                <nav aria-label="Main navigation">
+                    <ul class="nav-menu">
+                        <li class="home-dropdown" id="desktopHomeDropdown">
+                            <button class="home-dropdown-btn" type="button" aria-expanded="false" aria-controls="desktopHomeMenu">
+                                Home <i class="fa-solid fa-chevron-down chevron"></i>
+                            </button>
+                            <ul class="home-dropdown-menu" id="desktopHomeMenu">
+                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home 1</a></li>
+                                <li><a href="home2.html"><i class="fa-solid fa-house-chimney"></i> Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="services.html" class="nav-link active">Services</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- HEADER ACTIONS (CONTROLS + LOGIN) -->
+            <div class="header-actions">
+                <!-- Theme and RTL Controls placed here -->
+                <div class="header-controls">
+                    <button class="control-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle theme">
+                        <i class="fa-solid fa-sun" id="themeIcon" aria-hidden="true"></i>
+                    </button>
+
+                    <button class="control-btn" id="rtlToggle" type="button" aria-label="Switch text direction" title="Toggle text direction">
+                        <span id="rtlText">RTL</span>
+                    </button>
+                </div>
+
+                <a href="login.html" class="btn-login">Login</a>
+
+                <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <nav aria-label="Mobile navigation">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
+                    <li><a href="home2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+ 
+
+
+<!-- ================= SECTION 1: HERO ================= -->
+<section class="services-hero" id="servicesHome">
+    <div class="container">
+        <div class="services-hero-content">
+           <!--- <span class="eyebrow" style="color: gold;">
+                <i class="fa-solid fa-shield-halved"></i>
+                SECUREFENCE • PROFESSIONAL FENCING
+            </span>-->
+
+            <h1>Built to Protect.<br>
+                <span class="gold-text">Designed to Last.</span>
+            </h1>
+
+            <p style="color: black;">
+                Premium fence installation and dependable repairs, delivered
+                with thoughtful craftsmanship. From timeless privacy fencing
+                to secure gates, we help protect the places that matter most.
+            </p>
+
+            <div class="services-hero-actions">
+                <a href="contact.html" class="btn btn-primary">
+                    Request a Free Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+               <!---- <a href="#ourServices" class="btn btn-secondary">
+                    Explore Our Services-->
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION 2: SIX SERVICES ================= -->
+<section class="services-section" id="ourServices">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2>Complete Fencing <span class="gold-text">Solutions</span></h2>
+            <p>
+                Carefully selected materials, precise installation and
+                practical repair solutions for residential and commercial
+                properties.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <article class="card service-card reveal">
+                <div class="card-image-wrap">
+                    <img class="card-image"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb6rOFvwK9-uQJ_RqgdMq4xhue2B1GqocQhXK53EuzTw&s=10"
+                         alt="Elegant residential property" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+                    <h3>Residential Fencing</h3>
+                    <p>Enhance privacy, curb appeal and peace of mind with fencing designed around your home and outdoor space.</p>
+                    <a href="sd.html" class="text-link">Discuss your project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="card service-card reveal reveal-delay-1">
+                <div class="card-image-wrap">
+                    <img class="card-image"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExpI3omT-gO7maOCse79ZgCKAY-uDFiV1qO2vHMTEBg&s=10"
+                         alt="Modern commercial architecture" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Commercial Security Fencing</h3>
+                    <p>Reliable perimeter solutions for workplaces, retail properties, facilities and other commercial sites.</p>
+                    <a href="sd.html" class="text-link">Discuss your project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="card service-card reveal reveal-delay-2">
+                <div class="card-image-wrap">
+                    <img class="card-image"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5pYatmF-asasNm8-saSWPxwYOroPDahACYAfElUMueg&s=10"
+                         alt="Contemporary home and garden" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+                    <h3>Wood &amp; Privacy Fences</h3>
+                    <p>Classic timber style and secluded outdoor living, with finishes chosen to complement your property.</p>
+                    <a href="sd.html" class="text-link">Discuss your project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="card service-card reveal">
+                <div class="card-image-wrap">
+                    <img class="card-image"
+                         src="https://www.cld-systems.com/wp-content/uploads/2022/12/decorative-fencing-007.jpg"
+                         alt="Decorative modern fencing" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
+                    <h3>Metal &amp; Decorative Fences</h3>
+                    <p>Elegant metal fencing that balances strong boundaries with a clean, architectural appearance.</p>
+                    <a href="sd.html" class="text-link">Discuss your project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="card service-card reveal reveal-delay-1">
+                <div class="card-image-wrap">
+                    <img class="card-image"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGnlCaMRpcoUT9zFlucq_QjnKqoxuB09dNudjpWIhtBA&s"
+                         alt="Landscaped residential property" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Fence Repair &amp; Restoration</h3>
+                    <p>Repair loose panels, damaged posts, leaning sections and worn fittings to help extend your fence's life.</p>
+                    <a href="sd.html" class="text-link">Book a repair <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="card service-card reveal reveal-delay-2">
+                <div class="card-image-wrap">
+                    <img class="card-image"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi8eikrjlxjMNLoUvfMeHtX9uG9DG079aEpqX6pqsG4g&s=10"
+                         alt="Modern entrance and property exterior" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="service-icon"><i class="fa-solid fa-door-open"></i></div>
+                    <h3>Gate Installation &amp; Repairs</h3>
+                    <p>Complete your entryway with a well-fitted gate, dependable hardware and smooth everyday operation.</p>
+                    <a href="sd.html" class="text-link">Plan your gate <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION 3: INSTALLATION & REPAIR ================= -->
+<section class="services-section feature-section" id="installationRepair">
+    <div class="container feature-grid">
+
+        <div class="feature-image reveal">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh5l9veS9pZI9oS0wKKzN1wlfWlZ1GoPxVvXdqx9ZN5g&s=10"
+                 alt="Premium home exterior and landscaping" loading="lazy">
+        </div>
+
+        <div class="feature-copy reveal reveal-delay-1">
+            <span class="eyebrow">CRAFTSMANSHIP YOU CAN TRUST</span>
+
+            <h2>From First Post to <span class="gold-text">Final Finish</span></h2>
+
+            <p>
+                Every property is different. We take time to understand your
+                needs, assess the site and recommend a practical fencing
+                solution with a polished finish.
+            </p>
+
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i><span><strong>Thoughtful planning:</strong> clear recommendations based on layout, function and style.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i><span><strong>Careful installation:</strong> accurate alignment and attention to finishing details.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i><span><strong>Practical repairs:</strong> targeted fixes for common fence and gate problems.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i><span><strong>Respect for your property:</strong> a tidy, professional approach from start to finish.</span></li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-primary">
+                Talk to Our Team <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SECTION 4: OUR PROCESS ================= -->
+<section class="services-section" id="ourProcess">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">A SIMPLE, CLEAR PROCESS</span>
+            <h2>How We Bring Your Project <span class="gold-text">to Life</span></h2>
+            <p>
+                Four straightforward steps keep your fencing project organised,
+                from the first conversation to the final walkthrough.
+            </p>
+        </div>
+
+        <div class="process-grid">
+            <article class="process-step reveal">
+                <div class="process-number">01</div>
+                <h3>Consultation</h3>
+                <p>Tell us about your property, priorities, preferred style and any repair concerns.</p>
+            </article>
+
+            <article class="process-step reveal reveal-delay-1">
+                <div class="process-number">02</div>
+                <h3>Site Assessment</h3>
+                <p>We review the area and discuss suitable materials, layout and project requirements.</p>
+            </article>
+
+            <article class="process-step reveal reveal-delay-2">
+                <div class="process-number">03</div>
+                <h3>Installation or Repair</h3>
+                <p>Our planned work focuses on fit, stability, function and a clean professional finish.</p>
+            </article>
+
+            <article class="process-step reveal reveal-delay-3">
+                <div class="process-number">04</div>
+                <h3>Final Walkthrough</h3>
+                <p>Review the completed work with our team and discuss care and maintenance tips.</p>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SECTION 5: PROJECT GALLERY ================= -->
+<section class="services-section feature-section" id="projectGallery">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span class="eyebrow">DESIGN INSPIRATION</span>
+            <h2>Make a Strong First <span class="gold-text">Impression</span></h2>
+            <p>
+                Explore the different looks and functions a thoughtfully
+                planned property boundary can bring to your home or business.
+            </p>
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-tile reveal">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbE20DNfV23bu_s6d-Pk-CpWPghN-RQFvsadssAAjKTQ&s=10"
+                     alt="Contemporary residential exterior" loading="lazy">
+                <div class="project-caption">
+                    <span>Residential</span>
+                    <h3>Modern Curb Appeal</h3>
+                </div>
+            </article>
+
+            <article class="project-tile reveal reveal-delay-1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggLCQxYM1iP0Pl9Apv3HUnO1rcHe6GrwtWtuHDAFb4A&s=10"
+                     alt="Modern architectural exterior" loading="lazy">
+                <div class="project-caption">
+                    <span>Premium Design</span>
+                    <h3>Clean Architectural Lines</h3>
+                </div>
+            </article>
+
+            <article class="project-tile reveal reveal-delay-2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFglZEVB-vKruYcKKqNikqLdCUVqMWvL6J1OXOWlHklQ&s=10"
+                     alt="Warm residential landscaping" loading="lazy">
+                <div class="project-caption">
+                    <span>Classic Style</span>
+                    <h3>Warm Natural Character</h3>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECTION 6: CONTACT CTA ================= -->
+<section class="services-cta" id="serviceQuote">
+    <div class="container cta-inner reveal">
+
+        <div>
+            <span class="eyebrow">LET'S GET STARTED</span>
+            <h2>Ready to Secure Your <span class="gold-text">Property?</span></h2>
+            <p>
+                Whether you're planning a new fence or need a dependable
+                repair, SecureFence is ready to help you explore the right
+                solution.
+            </p>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary">
+            Request a Free Quote <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="index.html" class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="Images/Securelogo-removebg-preview.png"
+                             alt="SecureFence Logo">
+                    </div>
+                    <div class="logo-text">
+                        SECUREFENCE
+                        <span>REPAIR &amp; INSTALLATION</span>
+                    </div>
+                </a>
+
+                <p>
+                    Setting the standard for reliable perimeter security,
+                    architectural gates and quality fence installation.
+                    We help protect the places that matter most.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">› &nbsp; Home 1</a></li>
+                    <li><a href="home2.html">› &nbsp; Home 2</a></li>
+                    <li><a href="about.html">› &nbsp; About Our Craft</a></li>
+                    <li><a href="products.html">› &nbsp; Products</a></li>
+                    <li><a href="services.html">› &nbsp; Installation &amp; Repair</a></li>
+                    <li><a href="contact.html">› &nbsp; Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#ourServices">› &nbsp; Residential Fencing</a></li>
+                    <li><a href="#ourServices">› &nbsp; Wood Privacy Fencing</a></li>
+                    <li><a href="#ourServices">› &nbsp; Metal Fencing</a></li>
+                    <li><a href="#ourServices">› &nbsp; Gate Installation</a></li>
+                    <li><a href="#installationRepair">› &nbsp; Fence Repair</a></li>
+                    <li><a href="#ourProcess">› &nbsp; Our Process</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-heading">Stay Connected</h4>
+                <p>
+                    Subscribe for fencing ideas, property protection tips
+                    and design inspiration from SecureFence.
+                </p>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" name="email"
+                           placeholder="Your email address"
+                           class="newsletter-input"
+                           aria-label="Your email address" required>
+                    <button type="submit" class="newsletter-btn"
+                            aria-label="Subscribe">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span>
+                SecureFence. All Rights Reserved.
+            </p>
+
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const htmlRoot = document.documentElement;
+    const body = document.body;
+
+    /* ================= DYNAMIC YEAR ================= */
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    /* ================= DARK / LIGHT MODE ================= */
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function updateThemeButton() {
+        const isDark = htmlRoot.getAttribute("data-theme") === "dark";
+
+        themeIcon.className = isDark
+            ? "fa-solid fa-sun"
+            : "fa-solid fa-moon";
+
+        themeToggle.title = isDark
+            ? "Switch to Light Mode"
+            : "Switch to Dark Mode";
+
+        themeToggle.setAttribute("aria-label", themeToggle.title);
+    }
+
+    themeToggle.addEventListener("click", function () {
+        const currentTheme = htmlRoot.getAttribute("data-theme");
+
+        htmlRoot.setAttribute(
+            "data-theme",
+            currentTheme === "dark" ? "light" : "dark"
+        );
+
+        updateThemeButton();
+    });
+
+    updateThemeButton();
+
+    /* ================= RTL / LTR ================= */
+    const rtlToggle = document.getElementById("rtlToggle");
+    const rtlText = document.getElementById("rtlText");
+
+    function updateDirectionButton() {
+        const isLTR = htmlRoot.getAttribute("dir") === "ltr";
+
+        rtlText.textContent = isLTR ? "RTL" : "LTR";
+
+        rtlToggle.title = isLTR
+            ? "Switch to Right-to-Left"
+            : "Switch to Left-to-Right";
+
+        rtlToggle.setAttribute("aria-label", rtlToggle.title);
+    }
+
+    rtlToggle.addEventListener("click", function () {
+        const currentDirection = htmlRoot.getAttribute("dir");
+
+        htmlRoot.setAttribute(
+            "dir",
+            currentDirection === "ltr" ? "rtl" : "ltr"
+        );
+
+        updateDirectionButton();
+    });
+
+    updateDirectionButton();
+
+    /* ================= STICKY HEADER ================= */
+    const siteHeader = document.getElementById("siteHeader");
+
+    function updateHeader() {
+        siteHeader.classList.toggle("scrolled", window.scrollY > 30);
+    }
+
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
+
+    /* ================= HOME DROPDOWNS ================= */
+    function closeDropdowns() {
+        document.querySelectorAll(".home-dropdown").forEach(function (dropdown) {
+            dropdown.classList.remove("open");
+
+            const button = dropdown.querySelector(".home-dropdown-btn");
+
+            if (button) {
+                button.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
+    function setupDropdown(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+
+        if (!dropdown) return;
+
+        const button = dropdown.querySelector(".home-dropdown-btn");
+
+        button.addEventListener("click", function (event) {
+            event.stopPropagation();
+
+            const shouldOpen = !dropdown.classList.contains("open");
+
+            closeDropdowns();
+
+            if (shouldOpen) {
+                dropdown.classList.add("open");
+                button.setAttribute("aria-expanded", "true");
+            }
+        });
+    }
+
+    setupDropdown("desktopHomeDropdown");
+    setupDropdown("mobileHomeDropdown");
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".home-dropdown")) {
+            closeDropdowns();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeDropdowns();
+            closeMobileMenu();
+        }
+    });
+
+    /* ================= MOBILE MENU ================= */
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobileIcon = document.getElementById("mobileIcon");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    function closeMobileMenu() {
+        mobileMenu.classList.remove("show");
+        mobileToggle.setAttribute("aria-expanded", "false");
+        mobileToggle.setAttribute("aria-label", "Open navigation");
+        mobileIcon.className = "fa-solid fa-bars";
+    }
+
+    mobileToggle.addEventListener("click", function () {
+        const isOpen = mobileMenu.classList.toggle("show");
+
+        mobileToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
+        );
+
+        mobileIcon.className = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeMobileMenu();
+            closeDropdowns();
+        });
+    });
+
+    /* ================= NEWSLETTER DEMO ================= */
+    const newsletterForm = document.getElementById("newsletterForm");
+
+    newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = newsletterForm.querySelector('input[type="email"]');
+
+        if (!email.checkValidity()) {
+            email.reportValidity();
+            return;
+        }
+
+        alert(
+            "Thank you for subscribing to SecureFence updates! " +
+            "This is a demonstration form; no email has been stored."
+        );
+
+        newsletterForm.reset();
+    });
+
+    /* ================= SCROLL REVEAL ================= */
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+            function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.08,
+                rootMargin: "0px 0px -25px 0px"
+            }
+        );
+
+        revealItems.forEach(function (item) {
+            revealObserver.observe(item);
+        });
+    } else {
+        revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+        });
+    }
+
+    /* Reveal elements if browser restores a scrolled page */
+    window.addEventListener("load", function () {
+        revealItems.forEach(function (item) {
+            const rect = item.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                item.classList.add("is-visible");
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1203 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Service Details | SecureFence</title>
+<meta name="description" content="Explore SecureFence residential, commercial, wooden, metal fencing, repairs and gate installation services.">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+<link rel="icon" type="image/png" sizes="64x64" href="Images/Securelogo-removebg-preview.png">
+
+<style>
+/* ================= GLOBAL THEME ================= */
+
+
+
+/* ================= HERO ================= */
+
+.details-hero {
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(11,15,23,.88),
+            rgba(28,29,26,.78)
+        ),
+        url("Images/Modern Homes, Four Fence Styles.png")
+        center/cover no-repeat;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 17px;
+    margin-bottom: 20px;
+    border: 1px solid var(--gold-light);
+    border-radius: 30px;
+    color: #f0d58b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.details-hero h1 {
+    margin-bottom: 18px;
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.2;
+}
+
+.details-hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #e5e7eb;
+    font-size: 16px;
+}
+
+/* ================= MAIN SECTION ================= */
+
+.details-wrapper {
+    padding: 75px 0;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-intro h2 {
+    margin-bottom: 15px;
+    color: var(--heading);
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+.section-intro p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* ================= SERVICE NAVIGATION ================= */
+
+.service-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 55px;
+}
+
+.service-navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 76px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.service-navigation a:hover {
+    border-color: var(--gold);
+    color: var(--gold-dark);
+    background: var(--soft);
+    transform: translateY(-3px);
+}
+
+.service-navigation i {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+/* ================= SERVICE SECTIONS ================= */
+
+.service-section {
+    padding: 45px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 100px;
+}
+
+.service-section:last-of-type {
+    border-bottom: none;
+}
+
+.service-image {
+    height: 410px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    border-radius: 14px;
+    background: var(--soft);
+    box-shadow: var(--shadow);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.service-image:hover img {
+    transform: scale(1.04);
+}
+
+.service-heading {
+    margin-bottom: 14px;
+    color: var(--heading);
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 3.5vw, 37px);
+    line-height: 1.3;
+}
+
+.service-intro {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.service-description {
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= PRICING ================= */
+
+.cost-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 25px 0 30px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    background: var(--soft);
+}
+
+.cost-box h3 {
+    margin-bottom: 5px;
+    color: var(--heading);
+    font-size: 17px;
+}
+
+.cost-box p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.cost-value {
+    color: var(--gold-dark);
+    font-family: Georgia, serif;
+    font-size: clamp(23px, 3vw, 33px);
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.cost-value span {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* ================= FEATURES ================= */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.feature-card {
+    padding: 25px 22px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: .25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+    border-radius: 9px;
+    background: var(--soft);
+    color: var(--gold);
+    font-size: 21px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: var(--heading);
+    font-size: 16px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ================= BENEFITS ================= */
+
+.content-heading {
+    margin: 35px 0 20px;
+    color: var(--heading);
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 25px;
+}
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    font-size: 14px;
+}
+
+.benefit i {
+    margin-top: 5px;
+    color: var(--gold);
+}
+
+/* ================= PROCESS ================= */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.process-card {
+    padding: 22px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--soft);
+}
+
+.process-number {
+    margin-bottom: 10px;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.process-card h4 {
+    margin-bottom: 8px;
+    color: var(--heading);
+    font-size: 15px;
+}
+
+.process-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ================= PRICE TABLE ================= */
+
+.price-guide {
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+.price-guide h2 {
+    margin-bottom: 12px;
+    color: var(--heading);
+    font-family: Georgia, serif;
+    font-size: 29px;
+}
+
+.price-guide > p {
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.price-table {
+    width: 100%;
+    min-width: 540px;
+    border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 13px;
+}
+
+.price-table th {
+    background: var(--soft);
+    color: var(--heading);
+}
+
+.price-table td {
+    color: var(--muted);
+}
+
+.price-table td:first-child {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* ================= CTA ================= */
+
+.bottom-cta {
+    margin-top: 55px;
+    padding: 45px 25px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--soft);
+    text-align: center;
+}
+
+.bottom-cta h2 {
+    margin-bottom: 12px;
+    color: var(--heading);
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 3vw, 34px);
+}
+
+.bottom-cta p {
+    max-width: 680px;
+    margin: 0 auto 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    background: var(--gold);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.btn-cta:hover {
+    background: var(--gold-dark);
+}
+
+/* ================= FOOTER ================= */
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1050px) {
+    .nav-menu {
+        gap: 13px;
+    }
+
+    .header-container {
+        gap: 12px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+    .header-container {
+        min-height: 75px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .btn-login {
+        display: none;
+    }
+
+    .details-hero {
+        padding: 75px 20px;
+    }
+
+    .service-navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-image {
+        height: 320px;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .logo-icon img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .details-hero {
+        padding: 60px 15px;
+    }
+
+    .details-wrapper {
+        padding: 45px 0;
+    }
+
+    .service-navigation,
+    .features-grid,
+    .benefits-grid,
+    .process-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        height: 230px;
+    }
+
+    .cost-box {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cost-value {
+        text-align: left;
+    }
+
+    .price-guide {
+        padding: 22px 14px;
+    }
+
+    .bottom-cta {
+        padding: 32px 17px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="SecureFence Home">
+                <div class="logo-icon">
+                    <img src="Images/Securelogo-removebg-preview.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    SECUREFENCE
+                    <span>REPAIR & INSTALLATION</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION -->
+            <div class="nav-wrapper">
+                <nav aria-label="Main navigation">
+                    <ul class="nav-menu">
+                        <li class="home-dropdown" id="desktopHomeDropdown">
+                            <button class="home-dropdown-btn" type="button" aria-expanded="false" aria-controls="desktopHomeMenu">
+                                Home <i class="fa-solid fa-chevron-down chevron"></i>
+                            </button>
+                            <ul class="home-dropdown-menu" id="desktopHomeMenu">
+                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home 1</a></li>
+                                <li><a href="home2.html"><i class="fa-solid fa-house-chimney"></i> Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="services.html" class="nav-link active">Services</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- HEADER ACTIONS (CONTROLS + LOGIN) -->
+            <div class="header-actions">
+                <!-- Theme and RTL Controls placed here -->
+                <div class="header-controls">
+                    <button class="control-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle theme">
+                        <i class="fa-solid fa-sun" id="themeIcon" aria-hidden="true"></i>
+                    </button>
+
+                    <button class="control-btn" id="rtlToggle" type="button" aria-label="Switch text direction" title="Toggle text direction">
+                        <span id="rtlText">RTL</span>
+                    </button>
+                </div>
+
+                <a href="login.html" class="btn-login">Login</a>
+
+                <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <nav aria-label="Mobile navigation">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
+                    <li><a href="home2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="blog.html" class="nav-link ">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+ 
+<!-- HERO -->
+<section class="details-hero">
+    <span class="hero-badge">Comprehensive Solutions</span>
+    <h1>Fencing Service Details</h1>
+    <p>
+        Discover reliable fencing, premium decorative designs,
+        professional restoration, and gate installation services
+        tailored to your property.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<main class="details-wrapper">
+<div class="container">
+
+    <div class="section-intro">
+        <span class="eyebrow">SecureFence Expertise</span>
+        <h2>Explore Our Fencing Services</h2>
+        <p>
+            Explore our professional fencing solutions, estimated pricing,
+            quality features, and installation process.
+        </p>
+    </div>
+
+    <!-- SERVICE LINKS -->
+    <nav class="service-navigation" aria-label="Service sections">
+        <a href="#residential">
+            <span><i class="fa-solid fa-house"></i> Residential Fencing</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#commercial">
+            <span><i class="fa-solid fa-building-shield"></i> Commercial Security</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#wood">
+            <span><i class="fa-solid fa-tree"></i> Wood &amp; Privacy Fences</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#metal">
+            <span><i class="fa-solid fa-border-all"></i> Metal &amp; Decorative Fences</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#restoration">
+            <span><i class="fa-solid fa-screwdriver-wrench"></i> Fence Restoration &amp; Repair</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#gates">
+            <span><i class="fa-solid fa-door-open"></i> Gate Installation &amp; Repairs</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </nav>
+
+    <!-- SERVICE 1 -->
+    <section class="service-section" id="residential">
+
+        <div class="service-image">
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvu6obkUoa-Y4pqP6iTeYvDdyUk97lU55SvetowOGJIw&s=10"
+            alt="Residential boundary fencing">
+        </div>
+
+        <span class="eyebrow">01 / Residential</span>
+        <h2 class="service-heading">Residential Fencing Solutions</h2>
+
+        <p class="service-intro">
+            Enhance privacy, curb appeal, and peace of mind with fencing
+            designed around your home and outdoor space.
+        </p>
+
+        <p class="service-description">
+            Our residential fencing helps define property boundaries,
+            create safer outdoor spaces, and complement your home's
+            architecture. Choose from metal, wood, chain-link, and
+            decorative designs.
+        </p>
+
+        <div class="cost-box">
+            <div>
+                <h3>Estimated Installation Cost</h3>
+                <p>Depends on material, height, design, and site conditions.</p>
+            </div>
+            <div class="cost-value">
+                Rs.150–Rs.450
+                <span>Per running foot</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-house-lock"></i></div>
+                <h3>Family Safety</h3>
+                <p>Create secure boundaries for children, pets, and outdoor living areas.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3>Custom Designs</h3>
+                <p>Choose styles, finishes, heights, and materials to suit your home.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Durable Materials</h3>
+                <p>Select suitable materials and finishes for your local weather.</p>
+            </article>
+        </div>
+
+        <h3 class="content-heading">Key Benefits</h3>
+        <div class="benefits-grid">
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Custom fencing for different property sizes</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Boundary measurements and layout planning</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Privacy and decorative fence styles</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Gate and access point integration</div>
+        </div>
+
+        <h3 class="content-heading">Our Installation Process</h3>
+        <div class="process-grid">
+            <article class="process-card"><div class="process-number">01</div><h4>Site Inspection</h4><p>Review boundaries, measurements, and ground conditions.</p></article>
+            <article class="process-card"><div class="process-number">02</div><h4>Design &amp; Quote</h4><p>Choose suitable materials, height, style, and budget.</p></article>
+            <article class="process-card"><div class="process-number">03</div><h4>Installation</h4><p>Install posts, panels, and necessary fittings.</p></article>
+            <article class="process-card"><div class="process-number">04</div><h4>Final Check</h4><p>Inspect alignment, stability, and gate operation.</p></article>
+        </div>
+    </section>
+
+    <!-- SERVICE 2 -->
+    <section class="service-section" id="commercial">
+
+        <div class="service-image">
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIjVL1RzU9aguDmobumrlGZx1V-YztVf7jGVd6eqV8Fg&s=10"
+            alt="Commercial security fencing project">
+        </div>
+
+        <span class="eyebrow">02 / Commercial</span>
+        <h2 class="service-heading">Commercial Security Fencing</h2>
+
+        <p class="service-intro">
+            Reliable perimeter fencing for offices, warehouses,
+            industrial facilities, and business premises.
+        </p>
+
+        <p class="service-description">
+            We help businesses choose practical perimeter solutions that
+            balance access control, durability, and maintenance.
+            Available options include chain-link, metal panels, and
+            reinforced fencing systems.
+        </p>
+
+        <div class="cost-box">
+            <div>
+                <h3>Estimated Installation Cost</h3>
+                <p>Heavy-duty specifications and security requirements affect pricing.</p>
+            </div>
+            <div class="cost-value">
+                Rs.200–Rs.650
+                <span>Per running foot</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-industry"></i></div><h3>Heavy-Duty Options</h3><p>Explore metal, chain-link, and reinforced fencing systems.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-door-closed"></i></div><h3>Access Integration</h3><p>Plan gates and controlled entry points around your site.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Maintenance Support</h3><p>Maintain fencing systems through inspection and repairs.</p></article>
+        </div>
+
+        <h3 class="content-heading">Key Benefits</h3>
+        <div class="benefits-grid">
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Solutions for warehouses and business premises</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Chain-link, metal, and reinforced fence options</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Gate access and entry-point planning</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Durable finishes and maintenance options</div>
+        </div>
+
+        <h3 class="content-heading">Our Installation Process</h3>
+        <div class="process-grid">
+            <article class="process-card"><div class="process-number">01</div><h4>Site Assessment</h4><p>Review boundaries, access, and security needs.</p></article>
+            <article class="process-card"><div class="process-number">02</div><h4>Solution Planning</h4><p>Choose a suitable fence and gate configuration.</p></article>
+            <article class="process-card"><div class="process-number">03</div><h4>Installation</h4><p>Install agreed fencing and access components.</p></article>
+            <article class="process-card"><div class="process-number">04</div><h4>Quality Check</h4><p>Review stability, alignment, and access operation.</p></article>
+        </div>
+    </section>
+
+    <!-- SERVICE 3 -->
+    <section class="service-section" id="wood">
+
+        <div class="service-image">
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlovbRuUXw9zfaLz5js0JBUAJO84hB1698kx5vBcykjA&s=10"
+            alt="Wood fencing and outdoor privacy">
+        </div>
+
+        <span class="eyebrow">03 / Natural Elegance</span>
+        <h2 class="service-heading">Wood &amp; Privacy Fencing</h2>
+
+        <p class="service-intro">
+            Bring warmth and privacy to gardens, patios, and outdoor spaces
+            with attractive timber fencing.
+        </p>
+
+        <p class="service-description">
+            Choose from horizontal and vertical timber panels, decorative
+            tops, different heights, and protective finishes to complement
+            your landscape and improve outdoor privacy.
+        </p>
+
+        <div class="cost-box">
+            <div>
+                <h3>Estimated Installation Cost</h3>
+                <p>Timber species, panel thickness, treatment, and finish affect pricing.</p>
+            </div>
+            <div class="cost-value">
+                Rs.400–Rs.900
+                <span>Per running foot</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-tree"></i></div><h3>Natural Appearance</h3><p>Timber finishes create a warm and classic outdoor look.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-eye-slash"></i></div><h3>Added Privacy</h3><p>Choose panel arrangements that limit direct visibility.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-brush"></i></div><h3>Protective Finishes</h3><p>Consider suitable stains and sealants for easier upkeep.</p></article>
+        </div>
+
+        <h3 class="content-heading">Key Benefits</h3>
+        <div class="benefits-grid">
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Privacy panels for gardens and patios</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Horizontal and vertical timber styles</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Decorative tops and custom panel designs</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Staining, sealing, and maintenance options</div>
+        </div>
+
+        <h3 class="content-heading">Our Installation Process</h3>
+        <div class="process-grid">
+            <article class="process-card"><div class="process-number">01</div><h4>Measure</h4><p>Check boundaries, levels, and fence dimensions.</p></article>
+            <article class="process-card"><div class="process-number">02</div><h4>Select Style</h4><p>Choose timber, panel design, and finish.</p></article>
+            <article class="process-card"><div class="process-number">03</div><h4>Fit Panels</h4><p>Install posts and align the fence sections securely.</p></article>
+            <article class="process-card"><div class="process-number">04</div><h4>Finish</h4><p>Check stability and apply agreed protective finishes.</p></article>
+        </div>
+    </section>
+
+    <!-- SERVICE 4 -->
+    <section class="service-section" id="metal">
+
+        <div class="service-image">
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN6Dc4DIVsL-cdMSbFeAJ877x4-C7B5I9VWYsEW6JHw&s=10"
+            alt="Modern metal architectural fencing">
+        </div>
+
+        <span class="eyebrow">04 / Modern Craftsmanship</span>
+        <h2 class="service-heading">Metal &amp; Decorative Fencing</h2>
+
+        <p class="service-intro">
+            Combine property protection with striking architectural style
+            using modern metal and decorative fencing.
+        </p>
+
+        <p class="service-description">
+            Choose from ornamental ironwork, aluminium panels, contemporary
+            metal slats, and custom patterns. The right design balances
+            strength, appearance, maintenance, and your property's style.
+        </p>
+
+        <div class="cost-box">
+            <div>
+                <h3>Estimated Installation Cost</h3>
+                <p>Metal grade, thickness, fabrication, coating, and design affect pricing.</p>
+            </div>
+            <div class="cost-value">
+                Rs.350–Rs.1,000
+                <span>Per running foot</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-gem"></i></div><h3>Elegant Designs</h3><p>Explore decorative patterns, modern lines, and custom metalwork.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Strong Construction</h3><p>Choose suitable metal sections and secure mounting methods.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-paint-roller"></i></div><h3>Premium Finishes</h3><p>Choose appropriate paint or powder-coated finishes where available.</p></article>
+        </div>
+
+        <h3 class="content-heading">Key Benefits</h3>
+        <div class="benefits-grid">
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Decorative iron and aluminium options</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Modern slatted and ornamental designs</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Custom colours and protective finishes</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Matching pedestrian and driveway gates</div>
+        </div>
+
+        <h3 class="content-heading">Our Installation Process</h3>
+        <div class="process-grid">
+            <article class="process-card"><div class="process-number">01</div><h4>Design Review</h4><p>Discuss appearance and security requirements.</p></article>
+            <article class="process-card"><div class="process-number">02</div><h4>Material Selection</h4><p>Choose metal types, patterns, and finishes.</p></article>
+            <article class="process-card"><div class="process-number">03</div><h4>Fabrication &amp; Fit</h4><p>Prepare sections and install them securely.</p></article>
+            <article class="process-card"><div class="process-number">04</div><h4>Finish Check</h4><p>Inspect alignment, fixings, and appearance.</p></article>
+        </div>
+    </section>
+
+    <!-- SERVICE 5 -->
+    <section class="service-section" id="restoration">
+
+        <div class="service-image">
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI3WuOX7F8yxVmUEB7VsOACe6Jq6HilbKBUR4A2CruUA&s=10"
+            alt="Fence restoration and repair work">
+        </div>
+
+        <span class="eyebrow">05 / Restoration</span>
+        <h2 class="service-heading">Fence Restoration &amp; Repair</h2>
+
+        <p class="service-intro">
+            Restore the appearance, stability, and usefulness of existing
+            fences with targeted repairs and maintenance.
+        </p>
+
+        <p class="service-description">
+            Weather, age, corrosion, loose posts, and accidental damage
+            can weaken a fence. We assess the affected areas and recommend
+            practical repairs or replacement of damaged components.
+        </p>
+
+        <div class="cost-box">
+            <div>
+                <h3>Estimated Repair Cost</h3>
+                <p>Minor repairs may be charged separately depending on the job.</p>
+            </div>
+            <div class="cost-value">
+                Rs.100–Rs.350
+                <span>Per running foot, where applicable</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h3>Damage Assessment</h3><p>Identify loose sections, damaged posts, corrosion, and weak fittings.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-hammer"></i></div><h3>Targeted Repairs</h3><p>Repair or replace affected panels, rails, posts, and hardware.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-brush"></i></div><h3>Appearance Restoration</h3><p>Consider cleaning, surface preparation, repainting, or resealing.</p></article>
+        </div>
+
+        <h3 class="content-heading">Key Benefits</h3>
+        <div class="benefits-grid">
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Inspection of loose posts and unstable sections</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Replacement of broken panels and damaged fittings</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Rust treatment and protective finishes</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Maintenance recommendations</div>
+        </div>
+
+        <h3 class="content-heading">Our Repair Process</h3>
+        <div class="process-grid">
+            <article class="process-card"><div class="process-number">01</div><h4>Inspect</h4><p>Assess damage, stability, and repair requirements.</p></article>
+            <article class="process-card"><div class="process-number">02</div><h4>Repair Plan</h4><p>Identify parts to repair and components to replace.</p></article>
+            <article class="process-card"><div class="process-number">03</div><h4>Restore</h4><p>Complete the agreed repairs and surface treatments.</p></article>
+            <article class="process-card"><div class="process-number">04</div><h4>Recheck</h4><p>Review repaired sections and overall stability.</p></article>
+        </div>
+    </section>
+
+    <!-- SERVICE 6 -->
+    <section class="service-section" id="gates">
+
+        <div class="service-image">
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILWf8nWd5RWrfbnVjgL71jV_MKHKgfuWC8IzAQITy7w&s=10"
+            alt="Property entrance gate">
+        </div>
+
+        <span class="eyebrow">06 / Access Solutions</span>
+        <h2 class="service-heading">Gate Installation &amp; Repairs</h2>
+
+        <p class="service-intro">
+            Improve access, convenience, and security with professionally
+            fitted gates and dependable repair services.
+        </p>
+
+        <p class="service-description">
+            From driveway entrances to pedestrian access points, choose
+            gates suited to your property. Services may include new gate
+            fitting, hinge and latch adjustments, track repairs, lock
+            replacement, and automation assessment.
+        </p>
+
+        <div class="cost-box">
+            <div>
+                <h3>Estimated Gate Installation Cost</h3>
+                <p>Gate dimensions, material, hardware, and automation affect pricing.</p>
+            </div>
+            <div class="cost-value">
+                Rs.8,000–Rs.45,000+
+                <span>Per gate</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-arrows-left-right"></i></div><h3>Sliding &amp; Swing Gates</h3><p>Choose a configuration that suits available space and access.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-lock"></i></div><h3>Locks &amp; Hardware</h3><p>Repair or replace suitable hinges, latches, locks, and fittings.</p></article>
+            <article class="feature-card"><div class="feature-icon"><i class="fa-solid fa-gears"></i></div><h3>Gate Mechanisms</h3><p>Assess tracks, rollers, alignment, and automation components.</p></article>
+        </div>
+
+        <h3 class="content-heading">Key Benefits</h3>
+        <div class="benefits-grid">
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Pedestrian and driveway gate installation</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Sliding and swing gate options</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Hinge, lock, latch, roller, and track repairs</div>
+            <div class="benefit"><i class="fa-solid fa-circle-check"></i> Gate automation assessment where appropriate</div>
+        </div>
+
+        <h3 class="content-heading">Our Installation Process</h3>
+        <div class="process-grid">
+            <article class="process-card"><div class="process-number">01</div><h4>Access Assessment</h4><p>Measure the entrance and check clearance.</p></article>
+            <article class="process-card"><div class="process-number">02</div><h4>Gate Selection</h4><p>Choose gate type, material, and hardware.</p></article>
+            <article class="process-card"><div class="process-number">03</div><h4>Fit &amp; Adjust</h4><p>Install or repair the gate and adjust its movement.</p></article>
+            <article class="process-card"><div class="process-number">04</div><h4>Operation Check</h4><p>Check alignment, latching, and safe operation.</p></article>
+        </div>
+    </section>
+
+    <!-- PRICE GUIDE -->
+    <section class="price-guide">
+        <span class="eyebrow">Project Planning</span>
+        <h2>Fencing Cost Guide</h2>
+        <p>
+            Indicative estimates only. Actual charges depend on materials,
+            dimensions, labour, transportation, ground conditions, and
+            installation complexity.
+        </p>
+
+        <div class="table-wrapper">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Estimated Cost</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Residential Fencing</td><td>Rs.150–Rs.450</td><td>Running foot</td></tr>
+                    <tr><td>Commercial Security Fencing</td><td>Rs.200–Rs.650</td><td>Running foot</td></tr>
+                    <tr><td>Wood &amp; Privacy Fencing</td><td>Rs.400–Rs.900</td><td>Running foot</td></tr>
+                    <tr><td>Metal &amp; Decorative Fencing</td><td>Rs.350–Rs.1,000</td><td>Running foot</td></tr>
+                    <tr><td>Fence Restoration &amp; Repair</td><td>₹Rs.00–Rs.350</td><td>Running foot, where applicable</td></tr>
+                    <tr><td>Gate Installation</td><td>Rs.8,000–Rs.45,000+</td><td>Per gate</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="margin-top:20px;margin-bottom:0;">
+            <strong>Note:</strong> Running foot measures fence length;
+            square foot measures surface area. These units are not
+            interchangeable. Rates above are sample planning estimates,
+            not confirmed SecureFence quotations.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="bottom-cta">
+        <span class="eyebrow">Let's Secure Your Property</span>
+        <h2>Need a Custom Fencing Estimate?</h2>
+        <p>
+            Tell us about your property, measurements, preferred material,
+            fence height, and gate requirements. Contact our team to discuss
+            your project and request a quotation.
+        </p>
+        <a href="contact.html" class="btn-cta">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            &nbsp; Request a Free Quote
+        </a>
+    </section>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">
+                    <img src="Images/Securelogo-removebg-preview.png"
+                         alt="SecureFence Logo">
+                </div>
+                <div class="logo-text">
+                    SECUREFENCE
+                    <span>REPAIR &amp; INSTALLATION</span>
+                </div>
+            </a>
+
+            <p>
+                Setting the standard for reliable perimeter security,
+                architectural gates, and quality fence installation.
+            </p>
+
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="footer-heading">Our Services</h4>
+            <ul class="footer-links">
+                <li><a href="#residential">Residential Fencing</a></li>
+                <li><a href="#commercial">Commercial Fencing</a></li>
+                <li><a href="#wood">Wood Fencing</a></li>
+                <li><a href="#metal">Metal Fencing</a></li>
+                <li><a href="#restoration">Fence Repair</a></li>
+                <li><a href="#gates">Gate Installation</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4 class="footer-heading">Stay Connected</h4>
+            <p>
+                Subscribe for fencing ideas, property protection tips,
+                and design inspiration from SecureFence.
+            </p>
+
+            <form class="newsletter-form" action="contact.html" method="get">
+                <input type="email" name="email"
+                       class="newsletter-input"
+                       placeholder="Your email address"
+                       aria-label="Your email address" required>
+                <button type="submit" class="newsletter-btn"
+                        aria-label="Continue">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SecureFence. All Rights Reserved.</p>
+
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Premium Fencing Products</title>
+    <meta name="description" content="Explore premium fencing materials, gates and durable fencing solutions from SecureFence.">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="product.js" defer></script>
+    <link rel="icon" type="image/png" sizes="64x64" href="Images/Securelogo-removebg-preview.png">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+    <div class="container header-container">
+
+        <a href="index.html" class="brand-logo" aria-label="SecureFence Home">
+            <div class="logo-icon">
+                <img src="Images/Securelogo-removebg-preview.png" alt="SecureFence Logo">
+            </div>
+            <div class="logo-text">
+                SECUREFENCE
+                <span>REPAIR &amp; INSTALLATION</span>
+            </div>
+        </a>
+
+        <div class="nav-wrapper">
+            <nav aria-label="Main navigation">
+                <ul class="nav-menu">
+                    <li class="home-dropdown" id="desktopHomeDropdown">
+                        <button class="home-dropdown-btn" id="homeDropdownBtn" type="button"
+                                aria-expanded="false" aria-controls="desktopHomeMenu">
+                            Home <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                        </button>
+                        <ul class="home-dropdown-menu" id="desktopHomeMenu">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa-solid fa-house"></i> Home 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="home2.html" aria-current="page">
+                                    <i class="fa-solid fa-house-chimney"></i> Home 2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-actions">
+            <div class="header-controls">
+                <button class="control-btn" id="themeToggle" type="button"
+                        aria-label="Switch to light mode" title="Switch to light mode">
+                    <i class="fa-solid fa-sun" id="themeIcon" aria-hidden="true"></i>
+                </button>
+
+                <button class="control-btn" id="rtlToggle" type="button"
+                        aria-label="Switch to right-to-left direction" title="Switch to RTL">
+                   <!--- <i class="fa-solid fa-right-left" aria-hidden="true"></i>-->
+                    <span id="rtlText">RTL</span>
+                </button>
+            </div>
+
+            <a href="login.html" class="btn-login">Login</a>
+
+            <button class="mobile-toggle" id="mobileToggle" type="button"
+                    aria-label="Open navigation" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                <i class="fa-solid fa-bars" id="mobileIcon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="container">
+        <nav aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="home2.html" aria-current="page">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="section-kicker">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    PREMIUM FENCING MATERIALS
+                </div>
+
+                <h1 class="hero-title">
+                    Durable Fencing Solutions Built to
+                    <span class="gold-text">Protect &amp; Last</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover reliable fencing materials for residential and
+                    commercial properties. Choose durable, stylish solutions
+                    designed for security, privacy and long-lasting performance.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#product-catalog" class="btn btn-primary">
+                        <i class="fa-solid fa-store"></i> Explore Products
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fa-solid fa-calculator"></i> Get Free Quote
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Warranty*</span>
+                    </div>
+                    <span class="stat-divider"></span>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Quality Focus</span>
+                    </div>
+                    <span class="stat-divider"></span>
+                    <div class="stat-item">
+                        <span class="stat-number">5.0 <i class="fa-solid fa-star star-icon"></i></span>
+                        <span class="stat-label">Customer Rating*</span>
+                    </div>
+                </div>
+
+                <p class="hero-note">
+                    *Warranty and rating depend on the product and verified business information.
+                </p>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNZaq-bCLQ-EKsZGHWmSQ61UtaISErbPeWTeNqC9l2eg&s=10"
+                        alt="Premium residential fencing and outdoor design"
+                        class="hero-img"
+                        fetchpriority="high">
+
+                    <div class="floating-card top-card">
+                        <span class="card-icon"><i class="fa-solid fa-award"></i></span>
+                        <span class="card-text">
+                            <strong>Quality Materials</strong>
+                            <span>Built for durability</span>
+                        </span>
+                    </div>
+
+                    <div class="floating-card bottom-card">
+                        <span class="card-icon check-icon"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="card-text">
+                            <strong>Reliable Solutions</strong>
+                            <span>For home and business</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAIN LINK FENCING -->
+    <section class="product-supply-section" id="product-catalog">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">OUR COLLECTION</span>
+                <h2 class="section-title">Explore Our Products</h2>
+                <p class="section-subtitle">
+                    Quality fencing materials for strength, privacy and style.
+                </p>
+            </div>
+
+            <article class="product-showcase-card" id="chain-link">
+                <div class="product-image-wrapper">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGXo9eg3mqh5Z5R5LwJVI6s95LeYEJxZJiEOAq4zwD7A&s=10"
+                        alt="Chain link fence surrounding a property"
+                        loading="lazy">
+                    <span class="product-img-title-overlay">Chain Link Fencing</span>
+                    <span class="product-badge">
+                        <i class="fa-solid fa-award"></i> Durable Choice
+                    </span>
+                </div>
+
+                <div class="product-content-wrapper">
+                    <span class="product-eyebrow">01 / SECURITY &amp; STRENGTH</span>
+                    <h3 class="product-heading">Chain Link Fencing</h3>
+                    <p class="product-text">
+                        A practical fencing solution for homes, commercial premises,
+                        gardens and industrial boundaries. Its open mesh design
+                        provides visibility while establishing a clear property
+                        boundary. Ask us about available specifications and finishes.
+                    </p>
+
+                    <div class="product-features-block">
+                        <h4 class="features-title">Key Features</h4>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Strong and versatile mesh construction</li>
+                            <li><i class="fa-solid fa-check"></i> Suitable for residential and commercial use</li>
+                            <li><i class="fa-solid fa-check"></i> Multiple sizes and finishes available</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-contact-footer">
+                        <div class="contact-label">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            For product details and specifications
+                        </div>
+                        <div class="contact-numbers">
+                            <a href="tel:+919442101144">+91 94421 01144</a>
+                            <span>/</span>
+                            <a href="tel:+919994222064">+91 99942 22064</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="product-link">
+                        Enquire About This Product <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- VINYL FENCING -->
+    <section class="product-supply-section alternate-section" id="vinyl-fencing">
+        <div class="container">
+            <article class="product-showcase-card reverse-layout">
+                <div class="product-content-wrapper">
+                    <span class="product-eyebrow">02 / STYLE &amp; PRIVACY</span>
+                    <h2 class="product-heading">Vinyl Fencing</h2>
+                    <p class="product-text">
+                        Vinyl fencing offers a clean, modern appearance for
+                        residential gardens, yards and outdoor spaces. Its smooth
+                        surface is easy to clean, and quality vinyl products can
+                        resist moisture and everyday weather exposure.
+                    </p>
+
+                    <div class="product-features-block">
+                        <h3 class="features-title">Key Features</h3>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Easy-to-clean surface</li>
+                            <li><i class="fa-solid fa-check"></i> Modern styles for privacy and decoration</li>
+                            <li><i class="fa-solid fa-check"></i> No routine painting required for typical vinyl products</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-contact-footer">
+                        <div class="contact-label">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            For product details and specifications
+                        </div>
+                        <div class="contact-numbers">
+                            <a href="tel:+919442101144">+91 94421 01144</a>
+                            <span>/</span>
+                            <a href="tel:+919994222064">+91 99942 22064</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="product-link">
+                        Enquire About This Product <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="product-image-wrapper">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDWIVBvg-LPEekrC8mKfuERLiuEzqP1eR_QSwt2h2jcQ&s"
+                        alt="Modern home exterior and garden"
+                        loading="lazy">
+                    <span class="product-img-title-overlay">Vinyl Fencing</span>
+                    <span class="product-badge">
+                        <i class="fa-solid fa-shield-heart"></i> Modern Finish
+                    </span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- PREMIUM FENCING PRODUCTS -->
+    <section class="premium-products-section" id="premium-collection">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">PREMIUM COLLECTION</span>
+                <h2 class="section-title">More Fencing Solutions</h2>
+                <p class="section-subtitle">
+                    Discover elegant materials and secure designs for every property.
+                </p>
+            </div>
+
+            <div class="premium-products-grid">
+
+                <article class="premium-product-card" id="wooden-fencing">
+                    <div class="premium-product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEKTGsnFLIaZsaI8-mtKX4VbOCg-PHU2Gh0F5pP6bgfw&s=10" alt="Wooden fence in a garden" loading="lazy">
+                        <span class="premium-product-badge">Natural Elegance</span>
+                        <span class="premium-product-number">03</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">CLASSIC COLLECTION</span>
+                        <h3>Wooden Fencing</h3>
+                        <p>Bring natural warmth and timeless appeal to your garden or property with versatile wooden fence designs.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Natural appearance</li>
+                            <li><i class="fa-solid fa-check"></i> Multiple styles and heights</li>
+                            <li><i class="fa-solid fa-check"></i> Custom design options</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="premium-product-card" id="iron-fencing">
+                    <div class="premium-product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkq02GCQj6vULvysTpmmgMLPecyeI6NDUmMmiJCElvWg&s=10" alt="Decorative iron fence design" loading="lazy">
+                        <span class="premium-product-badge">Luxury Design</span>
+                        <span class="premium-product-number">04</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">ARCHITECTURAL COLLECTION</span>
+                        <h3>Wrought Iron Fencing</h3>
+                        <p>Create an impressive property boundary with decorative ironwork, elegant patterns and a premium appearance.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Decorative metalwork</li>
+                            <li><i class="fa-solid fa-check"></i> Custom patterns available</li>
+                            <li><i class="fa-solid fa-check"></i> Protective finishes available</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="premium-product-card" id="aluminium-fencing">
+                    <div class="premium-product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvLtvqNuao-7AG3dl_aUrVRs_LPYxB5GEghscMEPg4gw&s=10" alt="Contemporary property exterior" loading="lazy">
+                        <span class="premium-product-badge">Modern Style</span>
+                        <span class="premium-product-number">05</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">CONTEMPORARY COLLECTION</span>
+                        <h3>Aluminium Fencing</h3>
+                        <p>Give modern homes and commercial spaces a clean, streamlined finish with versatile aluminium fencing.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Lightweight construction</li>
+                            <li><i class="fa-solid fa-check"></i> Modern profiles</li>
+                            <li><i class="fa-solid fa-check"></i> Coated finish options</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="premium-product-card" id="steel-fencing">
+                    <div class="premium-product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQ1hJ6GE1GHUQwkLDBz5JECnbdQe8BsZ3v4Sg2CjxSw&s=10" alt="Strong modern property boundary" loading="lazy">
+                        <span class="premium-product-badge">Heavy Duty</span>
+                        <span class="premium-product-number">06</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">SECURITY COLLECTION</span>
+                        <h3>Steel Security Fencing</h3>
+                        <p>Define industrial, commercial and residential boundaries with robust steel fencing systems.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Strong metal construction</li>
+                            <li><i class="fa-solid fa-check"></i> Multiple panel options</li>
+                            <li><i class="fa-solid fa-check"></i> Security perimeter options</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="premium-product-card" id="picket-fencing">
+                    <div class="premium-product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKq49-Spi06C9DLHgAiFsqHRBn3gXTDjURhn0VZ5fGLg&s" alt="Classic garden fence" loading="lazy">
+                        <span class="premium-product-badge">Timeless Appeal</span>
+                        <span class="premium-product-number">07</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">GARDEN COLLECTION</span>
+                        <h3>Picket Fencing</h3>
+                        <p>Add curb appeal to front gardens, pathways and residential landscapes with classic picket designs.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Decorative boundary design</li>
+                            <li><i class="fa-solid fa-check"></i> Multiple colours and finishes</li>
+                            <li><i class="fa-solid fa-check"></i> Custom heights available</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="premium-product-card" id="driveway-gates">
+                    <div class="premium-product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvs-IUGRbnq-Gjrny7UDuAB8SZCM6TdqenYj_TLPM0eQ&s=10" alt="Premium driveway entrance and gate" loading="lazy">
+                        <span class="premium-product-badge">Premium Entrance</span>
+                        <span class="premium-product-number">08</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">GATE COLLECTION</span>
+                        <h3>Premium Driveway Gates</h3>
+                        <p>Make a striking first impression with elegant driveway gates designed to complement your property and fencing.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Single and double-leaf designs</li>
+                            <li><i class="fa-solid fa-check"></i> Custom dimensions and finishes</li>
+                            <li><i class="fa-solid fa-check"></i> Matching fence options</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Gate Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+             <!---   <article class="premium-product-card" id="sliding-gates">
+                    <div class="premium-product-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Modern entrance gate" loading="lazy">
+                        <span class="premium-product-badge">Modern Access</span>
+                        <span class="premium-product-number">09</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">AUTOMATION COLLECTION</span>
+                        <h3>Automatic Sliding Gates</h3>
+                        <p>Explore space-saving sliding gate solutions with optional automation, subject to site requirements.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Space-saving opening design</li>
+                            <li><i class="fa-solid fa-check"></i> Optional motorised operation</li>
+                            <li><i class="fa-solid fa-check"></i> Residential and commercial options</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Gate Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="premium-product-card" id="swing-gates">
+                    <div class="premium-product-image">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Elegant residential entrance" loading="lazy">
+                        <span class="premium-product-badge">Classic Luxury</span>
+                        <span class="premium-product-number">10</span>
+                    </div>
+                    <div class="premium-product-content">
+                        <span class="product-eyebrow">ENTRANCE COLLECTION</span>
+                        <h3>Luxury Swing Gates</h3>
+                        <p>Enhance your entrance with classic single or double swing gates in styles that complement your boundary.</p>
+                        <ul class="product-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Single and double gate options</li>
+                            <li><i class="fa-solid fa-check"></i> Decorative design choices</li>
+                            <li><i class="fa-solid fa-check"></i> Optional access automation</li>
+                        </ul>
+                        <a href="contact.html" class="product-link">Request Gate Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>-->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">THE SECUREFENCE DIFFERENCE</span>
+                <h2 class="section-title">Why Choose Our Products?</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <article class="benefit-card">
+                    <span class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <h3>Built for Security</h3>
+                    <p>Choose fencing options suited to your property's boundary and security needs.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="benefit-icon"><i class="fa-solid fa-medal"></i></span>
+                    <h3>Quality Focused</h3>
+                    <p>Explore material options and finishes selected to match your project requirements.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="benefit-icon"><i class="fa-solid fa-headset"></i></span>
+                    <h3>Personal Support</h3>
+                    <p>Contact our team for product information, specifications and a project quote.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container cta-container">
+            <div>
+                <span class="section-kicker">LET'S BUILD YOUR BOUNDARY</span>
+                <h2>Find the Right Fence for Your Property</h2>
+                <p>Tell us about your project and request a fencing quote.</p>
+            </div>
+            <a href="contact.html" class="btn btn-primary">
+                Request a Free Quote <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER: ONE FOOTER WITH TOP COLUMNS AND BOTTOM COPYRIGHT -->
+<footer class="site-footer" id="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-icon">
+                        <img src="Images/Securelogo-removebg-preview.png" alt="SecureFence logo">
+                    </span>
+                    <span class="logo-text">
+                        SECUREFENCE
+                        <span>REPAIR &amp; INSTALLATION</span>
+                    </span>
+                </a>
+
+                <p>
+                    Setting the standard for premium fencing, architectural gates
+                    and thoughtful perimeter solutions. Discover the right style
+                    for your property.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home 1</a></li>
+                 <!---   <li><a href="home2.html">Home 2</a></li>-->
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="blog.html">Latest Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Custom Iron Fabrication</a></li>
+                    <li><a href="services.html">Hardwood Fencing</a></li>
+                    <li><a href="services.html">Gate Installation</a></li>
+                    <li><a href="services.html">Gate Automation</a></li>
+                    <li><a href="services.html">Fence Repair</a></li>
+                    <li><a href="services.html">Security Fencing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-heading">Showroom Newsletter</h4>
+                <p>Subscribe to receive fencing design ideas, maintenance guides and showroom updates.</p>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <label class="sr-only" for="newsletterEmail">Your email address</label>
+                    <input id="newsletterEmail" type="email" name="email"
+                           placeholder="Your email address"
+                           class="newsletter-input" autocomplete="email" required>
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+                <p class="newsletter-message" id="newsletterMessage" aria-live="polite"></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> SecureFence. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="warranty.html">Warranty Information</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

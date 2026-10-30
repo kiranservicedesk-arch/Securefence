@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SecureFence | Customer Reviews</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f7f4;
+    color: #263746;
+}
+
+/* MAIN SECTION */
+.reviews-section {
+    width: 100%;
+    padding: 55px 0;
+    overflow: hidden;
+}
+
+.reviews-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+/* SECTION HEADING */
+.reviews-heading {
+    font-size: 34px;
+    font-weight: 700;
+    color: #142b3b;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.reviews-subtitle {
+    font-size: 15px;
+    color: #596875;
+    margin-top: -18px;
+    margin-bottom: 30px;
+}
+
+/* SLIDER */
+.reviews-slider {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* TRACK */
+.reviews-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    will-change: transform;
+}
+
+/* REVIEW CARD */
+.review-card {
+    flex: 0 0 350px;
+    min-height: 390px;
+    background: #ffffff;
+    border: 1px solid #dce6e1;
+    border-radius: 12px;
+    padding: 27px 25px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* STARS */
+.review-stars {
+    color: #f4ad25;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* REVIEW TEXT */
+.review-text {
+    color: #52616d;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* CUSTOMER NAME */
+.customer-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #263746;
+    margin-bottom: 10px;
+}
+
+.verified-user {
+    color: #23865b;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* PRODUCT DETAILS */
+.review-product {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid #e8eeea;
+    padding-top: 18px;
+    margin-top: auto;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+    object-fit: cover;
+    background: #e7eee9;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #526575;
+}
+
+/* SLIDER STATUS */
+.slider-note {
+    text-align: center;
+    margin-top: 22px;
+    color: #596875;
+    font-size: 13px;
+}
+
+.slider-note span {
+    color: #23865b;
+    font-weight: 700;
+}
+
+/* DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #101820;
+        color: #f1f5f9;
+    }
+
+    .reviews-heading {
+        color: #f1f5f9;
+    }
+
+    .reviews-subtitle,
+    .review-text,
+    .slider-note {
+        color: #c0ccd5;
+    }
+
+    .review-card {
+        background: #182630;
+        border-color: #40545f;
+    }
+
+    .customer-name,
+    .product-name {
+        color: #f1f5f9;
+    }
+
+    .review-product {
+        border-color: #40545f;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .reviews-section {
+        padding: 35px 0;
+    }
+
+    .reviews-container {
+        padding: 0 15px;
+    }
+
+    .reviews-heading {
+        font-size: 26px;
+    }
+
+    .review-card {
+        flex-basis: 290px;
+        min-height: 400px;
+        padding: 22px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="reviews-section">
+
+    <div class="reviews-container">
+
+        <h2 class="reviews-heading">
+            Customer Reviews for SecureFence
+        </h2>
+
+        <p class="reviews-subtitle">
+            Discover what our customers say about our fencing services.
+        </p>
+
+        <div class="reviews-slider"
+             id="reviewsSlider"
+             title="Click to pause or resume reviews">
+
+            <div class="reviews-track" id="reviewsTrack">
+
+                <!-- REVIEW 1 -->
+                <article class="review-card">
+
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+
+                        <p class="review-text">
+                            I had a smooth fencing experience with
+                            SecureFence. The team was professional,
+                            courteous and responsive. They completed
+                            the installation on time and paid attention
+                            to every detail. Highly recommended!
+                        </p>
+
+                        <h3 class="customer-name">Subraya M Hegde</h3>
+
+                        <p class="verified-user">
+                            ✓ VERIFIED CUSTOMER
+                        </p>
+                    </div>
+
+                    <div class="review-product">
+                        <img class="product-image"
+                             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80"
+                             alt="Residential property">
+
+                        <span class="product-name">
+                            Welded Mesh Fence
+                        </span>
+                    </div>
+
+                </article>
+
+                <!-- REVIEW 2 -->
+                <article class="review-card">
+
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+
+                        <p class="review-text">
+                            Very professional in their work. From the
+                            first call to the final installation,
+                            everything was handled smoothly. The team
+                            finished the project on time and delivered
+                            excellent quality.
+                        </p>
+
+                        <h3 class="customer-name">Anupama Raver</h3>
+
+                        <p class="verified-user">
+                            ✓ VERIFIED CUSTOMER
+                        </p>
+                    </div>
+
+                    <div class="review-product">
+                        <img class="product-image"
+                             src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=200&q=80"
+                             alt="Wooden property fencing">
+
+                        <span class="product-name">
+                            Chain Link Fence
+                        </span>
+                    </div>
+
+                </article>
+
+                <!-- REVIEW 3 -->
+                <article class="review-card">
+
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+
+                        <p class="review-text">
+                            We are very satisfied with the new fence.
+                            The installation looks neat, the materials
+                            are strong, and the team explained every
+                            step clearly. Great service and value
+                            for money.
+                        </p>
+
+                        <h3 class="customer-name">Ravi Jain</h3>
+
+                        <p class="verified-user">
+                            ✓ VERIFIED CUSTOMER
+                        </p>
+                    </div>
+
+                    <div class="review-product">
+                        <img class="product-image"
+                             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=200&q=80"
+                             alt="Open land and property">
+
+                        <span class="product-name">
+                            Barbed Wire Fence
+                        </span>
+                    </div>
+
+                </article>
+
+                <!-- REVIEW 4 -->
+                <article class="review-card">
+
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+
+                        <p class="review-text">
+                            SecureFence repaired our old damaged fence
+                            quickly. The staff arrived on schedule and
+                            did a clean, reliable job. Our property
+                            feels much safer now. I would recommend
+                            their repair service.
+                        </p>
+
+                        <h3 class="customer-name">Priya Sharma</h3>
+
+                        <p class="verified-user">
+                            ✓ VERIFIED CUSTOMER
+                        </p>
+                    </div>
+
+                    <div class="review-product">
+                        <img class="product-image"
+                             src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=200&q=80"
+                             alt="House and garden">
+
+                        <span class="product-name">
+                            Fence Repair
+                        </span>
+                    </div>
+
+                </article>
+
+                <!-- REVIEW 5 -->
+                <article class="review-card">
+
+                    <div>
+                        <div class="review-stars">★★★★★</div>
+
+                        <p class="review-text">
+                            Excellent customer service and quality
+                            materials. The team helped us choose the
+                            right fencing option for our needs and
+                            completed the work professionally. A
+                            dependable team for fencing projects.
+                        </p>
+
+                        <h3 class="customer-name">Rahul Kumar</h3>
+
+                        <p class="verified-user">
+                            ✓ VERIFIED CUSTOMER
+                        </p>
+                    </div>
+
+                    <div class="review-product">
+                        <img class="product-image"
+                             src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=200&q=80"
+                             alt="Property and outdoor area">
+
+                        <span class="product-name">
+                            Wooden Fence
+                        </span>
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+
+        <p class="slider-note">
+            <span id="sliderStatus">▶ Playing</span>
+            &nbsp; | &nbsp; Click reviews to pause or resume
+        </p>
+
+    </div>
+
+</section>
+
+<script>
+const slider = document.getElementById("reviewsSlider");
+const track = document.getElementById("reviewsTrack");
+const statusText = document.getElementById("sliderStatus");
+
+const originalCards = Array.from(track.children);
+
+let currentIndex = 0;
+let isPaused = false;
+let isHovering = false;
+let isAnimating = false;
+let holdTimer = null;
+let animationTimer = null;
+
+const HOLD_TIME = 2500;
+const MOVE_TIME = 650;
+
+// Duplicate cards to create a continuous loop.
+originalCards.forEach(card => {
+    track.appendChild(card.cloneNode(true));
+});
+
+function updateStatus() {
+    statusText.textContent =
+        isPaused || isHovering ? "Ⅱ Paused" : "▶ Playing";
+}
+
+function moveToNextCard() {
+    if (isPaused || isHovering || isAnimating) {
+        return;
+    }
+
+    isAnimating = true;
+
+    const firstCard = track.children[0];
+    const cardStyle = getComputedStyle(track);
+    const gap = parseFloat(cardStyle.columnGap) || 0;
+
+    const distance = firstCard.getBoundingClientRect().width + gap;
+
+    track.style.transition = `transform ${MOVE_TIME}ms ease-in-out`;
+    track.style.transform = `translateX(-${distance}px)`;
+
+    animationTimer = setTimeout(() => {
+        track.style.transition = "none";
+        track.appendChild(track.children[0]);
+        track.style.transform = "translateX(0)";
+
+        currentIndex = (currentIndex + 1) % originalCards.length;
+
+        isAnimating = false;
+
+        // Pause for 2.5 seconds before moving again.
+        startHold();
+    }, MOVE_TIME);
+}
+
+function startHold() {
+    clearTimeout(holdTimer);
+
+    if (isPaused || isHovering) {
+        updateStatus();
+        return;
+    }
+
+    updateStatus();
+
+    holdTimer = setTimeout(() => {
+        moveToNextCard();
+    }, HOLD_TIME);
+}
+
+// Click to pause/resume.
+slider.addEventListener("click", () => {
+    isPaused = !isPaused;
+
+    if (isPaused) {
+        clearTimeout(holdTimer);
+        clearTimeout(animationTimer);
+
+        // Stop the track at its current visual position.
+        const currentTransform = getComputedStyle(track).transform;
+
+        track.style.transition = "none";
+
+        if (currentTransform !== "none") {
+            track.style.transform = currentTransform;
+        }
+
+        isAnimating = false;
+    } else {
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        startHold();
+    }
+
+    updateStatus();
+});
+
+// Pause while mouse is over the slider.
+slider.addEventListener("mouseenter", () => {
+    isHovering = true;
+    clearTimeout(holdTimer);
+    updateStatus();
+});
+
+slider.addEventListener("mouseleave", () => {
+    isHovering = false;
+    startHold();
+});
+
+// Start automatically.
+startHold();
+</script>
+
+</body>
+</html>
