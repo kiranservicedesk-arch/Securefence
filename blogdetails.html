@@ -1,139 +1,141 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>The Ultimate Guide to Choosing the Perfect Fence | SecureFence</title>
+
 <meta name="description" content="Discover the best fencing materials, professional fence installation tips, repair advice, gates, and maintenance ideas from SecureFence.">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <link rel="stylesheet" href="main.css">
-<script src="main.js"></script>
-<link rel="icon" type="image/png" sizes="64x64" href="Securelogo-removebg-preview.png">
+
+<link rel="icon" type="image/png" href="Securelogo-removebg-preview.png">
 
 <style>
+
+/* =====================================================
+   SECUREFENCE BLOG DETAILS PAGE
+===================================================== */
+
 :root {
-    --bg: #ffffff;
-    --surface: #f5f7f5;
-    --text: #25352d;
-    --muted: #66736b;
-    --accent: #8f721a;
-    --border: #e1e8e2;
-    --header: rgba(255,255,255,.96);
-    --shadow: 0 12px 35px rgba(20,45,30,.08);
+    --sf-bg: #ffffff;
+    --sf-surface: #f6f5f1;
+    --sf-text: #25313b;
+    --sf-muted: #68737d;
+    --sf-gold: #b58b35;
+    --sf-border: #e5e0d5;
+    --sf-header: rgba(255,255,255,.97);
+    --sf-shadow: 0 12px 35px rgba(0,0,0,.07);
 }
 
 [data-theme="dark"] {
-    --bg: #101820;
-    --surface: #182630;
-    --text: #edf4ef;
-    --muted: #b2c0b7;
-    --accent: #45bd83;
-    --border:#8f721a;
-    --header: rgba(16,24,32,.96);
-    --shadow: 0 12px 35px rgba(0,0,0,.2);
+    --sf-bg: #0b0f17;
+    --sf-surface: #131924;
+    --sf-text: #f8fafc;
+    --sf-muted: #94a3b8;
+    --sf-gold: #d4af37;
+    --sf-border: #2a3341;
+    --sf-header: rgba(19,25,36,.97);
+    --sf-shadow: 0 12px 35px rgba(0,0,0,.25);
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
 
 body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.75;
+    background: var(--sf-bg);
+    color: var(--sf-text);
     transition: background .25s, color .25s;
 }
 
-a { color: inherit; text-decoration: none; }
-
-.sf-blog-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--header);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(12px);
+a {
+    text-decoration: none;
 }
 
-.sf-blog-nav {
-    max-width: 1200px;
-    margin: auto;
-    min-height: 82px;
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+/* =====================================================
+   BLOG ACTIVE NAVIGATION
+===================================================== */
+
+.nav-menu a.nav-link.active,
+.mobile-nav-list a.nav-link.active {
+    color: var(--gold-primary, var(--sf-gold)) !important;
 }
 
-.sf-blog-brand {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: -.8px;
+.nav-menu a.nav-link.active {
+    position: relative;
 }
 
-.sf-blog-brand span { color: var(--accent); }
-
-.sf-blog-tagline {
-    display: block;
-    color: var(--muted);
-    font-size: 9px;
-    letter-spacing: 2px;
-    line-height: 1.5;
+.nav-menu a.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    height: 2px;
+    background: var(--gold-primary, var(--sf-gold));
+    border-radius: 3px;
 }
 
-.sf-blog-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 14px;
-    font-weight: 600;
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+@media(max-width:900px) {
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
 }
 
-.sf-blog-links a:hover { color: var(--accent); }
-
-.sf-blog-actions {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-}
-
-.sf-blog-icon-btn {
-    width: 39px;
-    height: 39px;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    background: var(--surface);
-    color: var(--text);
-    cursor: pointer;
-}
-
-.sf-blog-menu-btn { display: none; }
+/* =====================================================
+   BLOG HERO
+===================================================== */
 
 .sf-blog-hero {
     min-height: 490px;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+
     background:
-      linear-gradient(90deg, rgba(9,22,15,.91), rgba(9,22,15,.58)),
-      url("Images/services-banner.jpg") center/cover no-repeat;
-    color: white;
+        linear-gradient(
+            90deg,
+            rgba(9,15,23,.94),
+            rgba(9,15,23,.65)
+        ),
+        url("Images/services-banner.jpg")
+        center/cover no-repeat;
+
+    color: #ffffff;
 }
 
 .sf-blog-hero-inner {
-    max-width: 1200px;
     width: 100%;
+    max-width: 1200px;
     margin: auto;
     padding: 75px 24px;
 }
 
 .sf-blog-eyebrow {
     display: inline-block;
-    color: #9de0b9;
+    color: #d4af37;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 3px;
@@ -143,15 +145,17 @@ a { color: inherit; text-decoration: none; }
 .sf-blog-hero h1 {
     max-width: 850px;
     margin: 20px 0;
-    font-size: clamp(36px, 5.2vw, 62px);
+    color: #ffffff;
+    font-size: clamp(36px,5.2vw,62px);
     line-height: 1.13;
     letter-spacing: -1.5px;
 }
 
 .sf-blog-hero p {
     max-width: 680px;
-    color: #e0e9e2;
+    color: #e0e5eb;
     font-size: 17px;
+    line-height: 1.8;
 }
 
 .sf-blog-meta {
@@ -159,70 +163,112 @@ a { color: inherit; text-decoration: none; }
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 25px;
-    color: #e1e9e2;
+    color: #e1e5ea;
     font-size: 13px;
 }
 
-.sf-blog-meta i { color: #9de0b9; margin-right: 6px; }
+.sf-blog-meta i {
+    color: #d4af37;
+    margin-right: 6px;
+}
+
+/* =====================================================
+   ARTICLE LAYOUT
+===================================================== */
 
 .sf-blog-container {
+    width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 65px 24px;
+
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-columns: minmax(0,1fr) 300px;
     align-items: start;
     gap: 45px;
 }
 
-.sf-blog-article { min-width: 0; }
+.sf-blog-article {
+    min-width: 0;
+}
 
 .sf-blog-cover {
+    display: block;
     width: 100%;
     height: 360px;
     object-fit: cover;
     border-radius: 12px;
-    display: block;
-    background: var(--surface);
+    background: var(--sf-surface);
+    box-shadow: var(--sf-shadow);
 }
 
 .sf-blog-intro {
-    font-size: 19px;
-    color: var(--muted);
     margin: 28px 0;
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--sf-muted);
 }
 
+/* =====================================================
+   ARTICLE CONTENT
+===================================================== */
+
 .sf-blog-article h2 {
+    margin: 42px 0 15px;
+    color: var(--sf-text);
     font-size: 29px;
     line-height: 1.3;
-    margin: 42px 0 15px;
     letter-spacing: -.5px;
 }
 
 .sf-blog-article h3 {
-    font-size: 21px;
     margin: 28px 0 8px;
+    color: var(--sf-text);
+    font-size: 21px;
 }
 
 .sf-blog-article p,
-.sf-blog-article li { color: var(--muted); }
+.sf-blog-article li {
+    color: var(--sf-muted);
+    line-height: 1.85;
+}
 
 .sf-blog-article ul,
-.sf-blog-article ol { padding-left: 25px; }
+.sf-blog-article ol {
+    padding-left: 25px;
+}
 
-.sf-blog-article li { margin: 9px 0; }
+.sf-blog-article li {
+    margin: 9px 0;
+}
 
-.sf-blog-article strong { color: var(--text); }
+.sf-blog-article strong {
+    color: var(--sf-text);
+}
+
+/* =====================================================
+   CALLOUT
+===================================================== */
 
 .sf-blog-callout {
     padding: 27px;
     margin: 35px 0;
-    border-left: 4px solid var(--accent);
-    background: var(--surface);
+    border-left: 4px solid var(--sf-gold);
+    background: var(--sf-surface);
     border-radius: 0 10px 10px 0;
 }
 
-.sf-blog-callout p { margin-bottom: 0; }
+.sf-blog-callout h3 {
+    color: var(--sf-text);
+}
+
+.sf-blog-callout p {
+    margin-bottom: 0;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
 
 .sf-blog-sidebar {
     position: sticky;
@@ -232,13 +278,14 @@ a { color: inherit; text-decoration: none; }
 .sf-blog-side-card {
     padding: 25px;
     margin-bottom: 22px;
-    border: 1px solid var(--border);
-    background: var(--surface);
+    border: 1px solid var(--sf-border);
+    background: var(--sf-surface);
     border-radius: 12px;
 }
 
 .sf-blog-side-card h3 {
     margin: 0 0 15px;
+    color: var(--sf-text);
     font-size: 19px;
 }
 
@@ -248,23 +295,44 @@ a { color: inherit; text-decoration: none; }
     margin: 0;
 }
 
-.sf-blog-toc li { margin: 11px 0; }
-
-.sf-blog-toc a {
-    color: var(--muted);
-    font-size: 14px;
+.sf-blog-toc li {
+    margin: 11px 0;
 }
 
-.sf-blog-toc a:hover { color: var(--accent); }
+.sf-blog-toc a {
+    color: var(--sf-muted);
+    font-size: 14px;
+    transition: color .2s;
+}
+
+.sf-blog-toc a:hover {
+    color: var(--sf-gold);
+}
+
+/* =====================================================
+   SIDEBAR CTA
+===================================================== */
 
 .sf-blog-cta {
     padding: 26px;
-    background: #8f721a;
-    color: white;
+    background: #182330;
+    color: #ffffff;
     border-radius: 12px;
 }
 
-.sf-blog-cta p { color: #d3e6da; font-size: 14px; }
+.sf-blog-cta h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.sf-blog-cta p {
+    color: #c3ccd5;
+    font-size: 14px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .sf-blog-btn {
     display: inline-flex;
@@ -272,313 +340,662 @@ a { color: inherit; text-decoration: none; }
     justify-content: center;
     gap: 9px;
     padding: 12px 18px;
-    background: var(--accent);
-    color: white;
+    background: var(--sf-gold);
+    color: #ffffff !important;
     border-radius: 5px;
     font-weight: 700;
     font-size: 14px;
     transition: transform .2s, opacity .2s;
 }
 
-.sf-blog-btn:hover { transform: translateY(-2px); opacity: .9; }
+.sf-blog-btn:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
 
 .sf-blog-cta .sf-blog-btn {
-    background: white;
-    color: #8f721a;
+    background: #d4af37;
+    color: #111827 !important;
 }
 
-.sf-blog-footer {
-    background: var(--surface);
-    border-top: 1px solid var(--border);
-    padding: 32px 24px;
-    text-align: center;
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: var(--footer-bg, var(--sf-surface));
 }
 
-.sf-blog-footer p { color: var(--muted); margin: 5px 0; }
-
-.sf-blog-social {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    margin: 15px 0;
-    color: var(--accent);
+.site-footer .footer-heading,
+.site-footer .logo-text {
+    color: var(--text-light, var(--sf-text));
 }
 
-@media (max-width: 900px) {
+.site-footer p,
+.site-footer .footer-links a {
+    color: var(--text-muted, var(--sf-muted));
+}
+
+/* =====================================================
+   RTL
+===================================================== */
+
+[dir="rtl"] .sf-blog-article {
+    text-align: right;
+}
+
+[dir="rtl"] .sf-blog-callout {
+    border-left: none;
+    border-right: 4px solid var(--sf-gold);
+    border-radius: 10px 0 0 10px;
+}
+
+[dir="rtl"] .sf-blog-article ul,
+[dir="rtl"] .sf-blog-article ol {
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+[dir="rtl"] .sf-blog-meta i {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+[dir="rtl"] .sf-blog-btn {
+    flex-direction: row-reverse;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:900px) {
+
     .sf-blog-container {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
     }
 
-    .sf-blog-sidebar { position: static; }
-
-    .sf-blog-links {
-        display: none;
-        position: absolute;
-        top: 81px;
-        left: 0;
-        right: 0;
-        padding: 22px 25px;
-        background: var(--bg);
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 17px;
+    .sf-blog-sidebar {
+        position: static;
     }
 
-    .sf-blog-links.sf-blog-links-open { display: flex; }
+    .sf-blog-cover {
+        height: 320px;
+    }
 
-    .sf-blog-menu-btn { display: inline-block; }
 }
 
-@media (max-width: 600px) {
-    .sf-blog-nav { padding: 12px 16px; }
-    .sf-blog-brand { font-size: 22px; }
-    .sf-blog-hero { min-height: 430px; }
-    .sf-blog-hero-inner { padding: 55px 20px; }
-    .sf-blog-container { padding: 35px 18px; }
-    .sf-blog-cover { height: 240px; }
-    .sf-blog-article h2 { font-size: 25px; }
-    .sf-blog-meta { gap: 10px; }
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px) {
+
+    .sf-blog-hero {
+        min-height: 430px;
+    }
+
+    .sf-blog-hero-inner {
+        padding: 55px 20px;
+    }
+
+    .sf-blog-hero h1 {
+        font-size: 36px;
+    }
+
+    .sf-blog-hero p {
+        font-size: 15px;
+    }
+
+    .sf-blog-container {
+        padding: 35px 18px;
+    }
+
+    .sf-blog-cover {
+        height: 240px;
+    }
+
+    .sf-blog-intro {
+        font-size: 17px;
+    }
+
+    .sf-blog-article h2 {
+        font-size: 25px;
+    }
+
+    .sf-blog-article h3 {
+        font-size: 19px;
+    }
+
+    .sf-blog-meta {
+        gap: 10px;
+    }
+
+    .sf-blog-callout,
+    .sf-blog-side-card,
+    .sf-blog-cta {
+        padding: 20px;
+    }
+
 }
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
- <!-- HEADER -->
-    <header class="site-header" id="siteHeader">
-        <div class="container header-container">
-            <a href="index.html" class="brand-logo" aria-label="SecureFence Home">
-                <div class="logo-icon">
-                    <img src="Securelogo-removebg-preview.png" alt="Logo">
-                </div>
-                <div class="logo-text">
-                    SECUREFENCE
-                    <span>REPAIR & INSTALLATION</span>
-                </div>
-            </a>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-            <!-- DESKTOP NAVIGATION -->
-            <div class="nav-wrapper">
-                <nav aria-label="Main navigation">
-                    <ul class="nav-menu">
-                        <li class="home-dropdown" id="desktopHomeDropdown">
-                            <button class="home-dropdown-btn" type="button" aria-expanded="false" aria-controls="desktopHomeMenu">
-                                Home <i class="fa-solid fa-chevron-down chevron"></i>
-                            </button>
-                            <ul class="home-dropdown-menu" id="desktopHomeMenu">
-                                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home 1</a></li>
-                                <li><a href="home2.html"><i class="fa-solid fa-house-chimney"></i> Home 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html" class="nav-link">About</a></li>
-                        <li><a href="products.html" class="nav-link">Products</a></li>
-                        <li><a href="services.html" class="nav-link ">Services</a></li>
-                        <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
+<header class="site-header" id="siteHeader">
+
+    <div class="container header-container">
+
+        <a href="index.html" class="brand-logo" aria-label="SecureFence Home">
+
+            <div class="logo-icon">
+                <img src="Securelogo-removebg-preview.png" alt="SecureFence Logo">
             </div>
 
-            <!-- HEADER ACTIONS (CONTROLS + LOGIN) -->
-            <div class="header-actions">
-                <!-- Theme and RTL Controls placed here -->
-                <div class="header-controls">
-                    <button class="control-btn" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle theme">
-                        <i class="fa-solid fa-sun" id="themeIcon" aria-hidden="true"></i>
-                    </button>
-
-                    <button class="control-btn" id="rtlToggle" type="button" aria-label="Switch text direction" title="Toggle text direction">
-                        <span id="rtlText">RTL</span>
-                    </button>
-                </div>
-
-                <a href="login.html" class="btn-login">Login</a>
-
-                <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+            <div class="logo-text">
+                SECUREFENCE
+                <span>REPAIR &amp; INSTALLATION</span>
             </div>
-        </div>
-    </header>
 
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="container">
-            <nav aria-label="Mobile navigation">
-                <ul class="mobile-nav-list">
-                    <li><a href="index.html" class="nav-link">Home 1</a></li>
-                    <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        </a>
+
+        <div class="nav-wrapper">
+
+            <nav aria-label="Main navigation">
+
+                <ul class="nav-menu">
+
+                    <li class="home-dropdown" id="desktopHomeDropdown">
+
+                        <button class="home-dropdown-btn" type="button"
+                        aria-expanded="false" aria-controls="desktopHomeMenu">
+
+                            Home
+                            <i class="fa-solid fa-chevron-down chevron"></i>
+
+                        </button>
+
+                        <ul class="home-dropdown-menu" id="desktopHomeMenu">
+
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa-solid fa-house"></i> Home 1
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="home2.html">
+                                    <i class="fa-solid fa-house-chimney"></i> Home 2
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
                     <li><a href="about.html" class="nav-link">About</a></li>
+
                     <li><a href="products.html" class="nav-link">Products</a></li>
+
                     <li><a href="services.html" class="nav-link">Services</a></li>
+
                     <li><a href="blog.html" class="nav-link active">Blog</a></li>
+
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
+
                 </ul>
+
             </nav>
+
         </div>
+
+        <div class="header-actions">
+
+            <div class="header-controls">
+
+                <button class="control-btn" id="themeToggle"
+                type="button" aria-label="Toggle theme" title="Toggle theme">
+
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+
+                </button>
+
+                <button class="control-btn" id="rtlToggle"
+                type="button" aria-label="Toggle text direction">
+
+                    <span id="rtlText">RTL</span>
+
+                </button>
+
+            </div>
+
+            <a href="login.html" class="btn-login">Login</a>
+
+            <button class="mobile-toggle" id="mobileToggle"
+            type="button" aria-label="Open navigation" aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
     </div>
 
- 
+</header>
 
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <div class="container">
+
+        <nav aria-label="Mobile navigation">
+
+            <ul class="mobile-nav-list">
+
+                <li><a href="index.html" class="nav-link">Home 1</a></li>
+
+                <li><a href="home2.html" class="nav-link">Home 2</a></li>
+
+                <li><a href="about.html" class="nav-link">About</a></li>
+
+                <li><a href="products.html" class="nav-link">Products</a></li>
+
+                <li><a href="services.html" class="nav-link">Services</a></li>
+
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     BLOG HERO
+===================================================== -->
 
 <section class="sf-blog-hero">
+
     <div class="sf-blog-hero-inner">
+
         <span class="sf-blog-eyebrow">Installation Guides</span>
-        <h1>The Ultimate Guide to Choosing the Perfect Fence for Your Property</h1>
-        <p>Discover the right fencing materials, expert installation tips, repair advice, and maintenance solutions for a safer, more beautiful property.</p>
+
+        <h1>
+            The Ultimate Guide to Choosing the Perfect Fence for Your Property
+        </h1>
+
+        <p>
+            Discover the right fencing materials, expert installation tips,
+            repair advice, and maintenance solutions for a safer,
+            more beautiful property.
+        </p>
+
         <div class="sf-blog-meta">
-            <span><i class="fa-regular fa-calendar"></i> October 25, 2026</span>
-            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
-            <span><i class="fa-solid fa-tag"></i> Installation &amp; Repair</span>
+
+            <span>
+                <i class="fa-regular fa-calendar"></i>
+                October 25, 2026
+            </span>
+
+            <span>
+                <i class="fa-regular fa-clock"></i>
+                8 min read
+            </span>
+
+            <span>
+                <i class="fa-solid fa-tag"></i>
+                Installation &amp; Repair
+            </span>
+
         </div>
+
     </div>
+
 </section>
 
+
+<!-- =====================================================
+     BLOG CONTENT
+===================================================== -->
+
 <main class="sf-blog-container">
+
     <article class="sf-blog-article">
 
-        <img class="sf-blog-cover"
-             src="Images/services-banner.jpg"
-             alt="Professional fencing installation around a property"
-             onerror="this.style.display='none'">
+        <img
+            class="sf-blog-cover"
+            src="Images/services-banner.jpg"
+            alt="Professional fencing installation around a property"
+            onerror="this.style.display='none'"
+        >
 
         <p class="sf-blog-intro">
+
             Your fence is more than just a boundary. It protects your property,
             enhances privacy, improves security, and adds lasting beauty to
             your outdoor space. Choosing the right fence is an investment in
             your property's appearance and functionality.
+
         </p>
 
         <p>
+
             At <strong>SecureFence</strong>, we believe every property deserves
             a fence that combines strength, functionality, and style. Whether
             you are planning a new installation or repairing an existing
             fence, this guide will help you make a confident decision.
+
         </p>
 
+
         <h2 id="needs">1. Understand Your Fencing Needs</h2>
+
         <p>Start by deciding what you want your fence to accomplish.</p>
+
         <ul>
+
             <li><strong>Privacy:</strong> Wooden and vinyl fencing can create a more private outdoor space.</li>
+
             <li><strong>Security:</strong> Iron fencing, secure gates, and suitable chain-link systems can help protect your property.</li>
+
             <li><strong>Appearance:</strong> Decorative metalwork and premium timber can complement your property's design.</li>
+
             <li><strong>Family and pet safety:</strong> Consider fence height, spacing, and secure latches.</li>
+
         </ul>
+
 
         <h2 id="materials">2. Explore the Most Popular Fence Types</h2>
 
         <h3>Wooden Fencing</h3>
-        <p>Wood offers a natural, timeless appearance for gardens, backyards, and traditional homes. Regular sealing, staining, and inspections help protect it from weather damage and rot.</p>
+
+        <p>
+            Wood offers a natural, timeless appearance for gardens, backyards,
+            and traditional homes. Regular sealing, staining, and inspections
+            help protect it from weather damage and rot.
+        </p>
 
         <h3>Iron and Metal Fencing</h3>
-        <p>Iron fencing combines strength with an elegant architectural appearance. It works well for front yards, driveways, commercial boundaries, and decorative gates. Inspect coatings regularly to help prevent corrosion.</p>
+
+        <p>
+            Iron fencing combines strength with an elegant architectural
+            appearance. It works well for front yards, driveways, commercial
+            boundaries, and decorative gates. Inspect coatings regularly
+            to help prevent corrosion.
+        </p>
 
         <h3>Vinyl Fencing</h3>
-        <p>Vinyl provides a clean, modern finish and generally requires less routine maintenance than timber. It is available in a range of colours, heights, and styles.</p>
+
+        <p>
+            Vinyl provides a clean, modern finish and generally requires
+            less routine maintenance than timber. It is available in a
+            range of colours, heights, and styles.
+        </p>
 
         <h3>Chain-Link Fencing</h3>
-        <p>Chain-link fencing is a practical option for gardens, pet areas, commercial sites, and larger boundaries where visibility and function matter.</p>
+
+        <p>
+            Chain-link fencing is a practical option for gardens, pet areas,
+            commercial sites, and larger boundaries where visibility and
+            function matter.
+        </p>
 
         <h3>Premium Gates and Custom Designs</h3>
-        <p>Sliding gates, swing gates, ornamental iron gates, and custom fencing can create a coordinated entrance. Choose gate hardware and access arrangements to suit your daily needs.</p>
+
+        <p>
+            Sliding gates, swing gates, ornamental iron gates, and custom
+            fencing can create a coordinated entrance. Choose gate hardware
+            and access arrangements to suit your daily needs.
+        </p>
+
 
         <h2 id="repair">3. Know When Your Fence Needs Repair</h2>
-        <p>Addressing small issues early can prevent more extensive damage. Watch for these common warning signs:</p>
+
+        <p>
+            Addressing small issues early can prevent more extensive damage.
+            Watch for these common warning signs:
+        </p>
+
         <ul>
+
             <li>Loose or leaning fence posts.</li>
+
             <li>Broken, warped, or rotting wooden panels.</li>
+
             <li>Rust, corrosion, or peeling paint on metal fencing.</li>
+
             <li>Sagging gates, damaged hinges, or faulty latches.</li>
+
             <li>Loose chain links or gaps along the boundary.</li>
+
         </ul>
-        <p>A professional inspection can help determine whether a local repair, partial replacement, or complete fence replacement is the most practical option.</p>
+
+        <p>
+            A professional inspection can help determine whether a local
+            repair, partial replacement, or complete fence replacement
+            is the most practical option.
+        </p>
+
 
         <div class="sf-blog-callout">
-            <strong>Expert tip</strong>
-            <p>Do not wait for a small lean or loose post to become a major problem. Inspect your fence periodically, especially after storms or heavy rain.</p>
+
+            <strong>Expert Tip</strong>
+
+            <p>
+                Do not wait for a small lean or loose post to become a major
+                problem. Inspect your fence periodically, especially after
+                storms or heavy rain.
+            </p>
+
         </div>
+
 
         <h2 id="installation">4. Why Professional Fence Installation Matters</h2>
-        <p>Good installation begins with careful planning. Ground conditions, post placement, material selection, and secure gate fittings all contribute to the fence's performance.</p>
+
+        <p>
+            Good installation begins with careful planning. Ground conditions,
+            post placement, material selection, and secure gate fittings
+            all contribute to the fence's performance.
+        </p>
+
         <ol>
+
             <li>Confirm your property boundaries.</li>
+
             <li>Check local fencing regulations and permissions.</li>
+
             <li>Identify underground utility lines before digging.</li>
+
             <li>Select materials suitable for your climate and site.</li>
+
             <li>Plan gate access, drainage, and maintenance.</li>
+
             <li>Discuss the project scope, quote, and warranty before work begins.</li>
+
         </ol>
 
+
         <h2 id="maintenance">5. Maintain Your Fence for Long-Lasting Performance</h2>
-        <p>Simple maintenance can preserve appearance and help extend the useful life of your fence.</p>
+
+        <p>
+            Simple maintenance can preserve appearance and help extend
+            the useful life of your fence.
+        </p>
+
         <ul>
+
             <li>Clean dirt and debris from fence surfaces.</li>
+
             <li>Check posts, panels, fasteners, and hinges.</li>
+
             <li>Apply appropriate protective treatments to wooden fencing.</li>
+
             <li>Touch up damaged protective coatings on metal fences.</li>
+
             <li>Check gate alignment and latch operation.</li>
+
             <li>Keep plants trimmed back where they trap moisture.</li>
+
         </ul>
 
+
         <h2 id="budget">6. Choose a Fence That Fits Your Budget</h2>
-        <p>Compare the initial material and installation costs alongside expected maintenance and future repairs. Timber, vinyl, iron, and chain-link fencing each have different benefits and upkeep requirements. The right choice depends on your priorities, site conditions, and budget.</p>
+
+        <p>
+            Compare the initial material and installation costs alongside
+            expected maintenance and future repairs. Timber, vinyl, iron,
+            and chain-link fencing each have different benefits and upkeep
+            requirements. The right choice depends on your priorities,
+            site conditions, and budget.
+        </p>
+
 
         <h2 id="securefence">Why Choose SecureFence?</h2>
-        <p>SecureFence helps homeowners and businesses plan fencing projects around their property's needs. From new fence installation and replacement to repairs, gate upgrades, and maintenance, we focus on dependable workmanship and a professional finish.</p>
+
+        <p>
+            SecureFence helps homeowners and businesses plan fencing projects
+            around their property's needs. From new fence installation and
+            replacement to repairs, gate upgrades, and maintenance, we focus
+            on dependable workmanship and a professional finish.
+        </p>
+
 
         <h2 id="conclusion">Final Thoughts</h2>
-        <p>Choosing the perfect fence becomes easier when you understand your needs, compare materials, consider long-term maintenance, and plan for quality installation. The right fencing solution can improve privacy, security, and curb appeal for years to come.</p>
+
+        <p>
+            Choosing the perfect fence becomes easier when you understand
+            your needs, compare materials, consider long-term maintenance,
+            and plan for quality installation. The right fencing solution
+            can improve privacy, security, and curb appeal for years to come.
+        </p>
+
 
         <div class="sf-blog-callout">
-            <h3 style="margin-top:0">Ready to Upgrade Your Property?</h3>
-            <p>Talk to SecureFence about your next fence installation, repair, or gate project.</p>
+
+            <h3 style="margin-top:0">
+                Ready to Upgrade Your Property?
+            </h3>
+
+            <p>
+                Talk to SecureFence about your next fence installation,
+                repair, or gate project.
+            </p>
+
             <a class="sf-blog-btn" href="contact.html">
-                Request a Free Quote <i class="fa-solid fa-arrow-right"></i>
+
+                Request a Free Quote
+
+                <i class="fa-solid fa-arrow-right"></i>
+
             </a>
+
         </div>
+
     </article>
 
+
+    <!-- SIDEBAR -->
+
     <aside class="sf-blog-sidebar">
+
         <div class="sf-blog-side-card">
+
             <h3>In This Article</h3>
+
             <ul class="sf-blog-toc">
+
                 <li><a href="#needs">01. Identify Your Needs</a></li>
+
                 <li><a href="#materials">02. Fence Types</a></li>
+
                 <li><a href="#repair">03. Fence Repairs</a></li>
+
                 <li><a href="#installation">04. Installation</a></li>
+
                 <li><a href="#maintenance">05. Maintenance</a></li>
+
                 <li><a href="#budget">06. Budget Planning</a></li>
+
                 <li><a href="#conclusion">07. Final Thoughts</a></li>
+
             </ul>
+
         </div>
 
+
         <div class="sf-blog-cta">
+
             <h3>Need Fence Installation or Repair?</h3>
-            <p>Let our team help you find the right fencing solution for your property.</p>
+
+            <p>
+                Let our team help you find the right fencing solution
+                for your property.
+            </p>
+
             <a href="contact.html" class="sf-blog-btn">
-                Contact Us <i class="fa-solid fa-arrow-right"></i>
+
+                Contact Us
+
+                <i class="fa-solid fa-arrow-right"></i>
+
             </a>
+
         </div>
+
     </aside>
+
 </main>
-<!-- ================= FOOTER ================= -->
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
+
     <div class="container">
 
         <div class="footer-grid">
 
             <div class="footer-brand">
+
                 <a href="index.html" class="brand-logo">
+
                     <div class="logo-icon">
+
                         <img src="Securelogo-removebg-preview.png"
-                             alt="SecureFence Logo">
+                        alt="SecureFence Logo">
+
                     </div>
+
                     <div class="logo-text">
+
                         SECUREFENCE
+
                         <span>REPAIR &amp; INSTALLATION</span>
+
                     </div>
+
                 </a>
 
                 <p>
@@ -588,125 +1005,194 @@ a { color: inherit; text-decoration: none; }
                 </p>
 
                 <div class="social-links">
+
                     <a href="#" class="social-icon" aria-label="Facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
+
                     <a href="#" class="social-icon" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
+
                     <a href="#" class="social-icon" aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
+
                     <a href="#" class="social-icon" aria-label="Pinterest">
                         <i class="fa-brands fa-pinterest-p"></i>
                     </a>
+
                 </div>
+
             </div>
 
+
             <div>
+
                 <h4 class="footer-heading">Quick Links</h4>
+
                 <ul class="footer-links">
+
                     <li><a href="index.html">› &nbsp; Home 1</a></li>
+
                     <li><a href="home2.html">› &nbsp; Home 2</a></li>
+
                     <li><a href="about.html">› &nbsp; About Our Craft</a></li>
+
                     <li><a href="products.html">› &nbsp; Products</a></li>
+
                     <li><a href="services.html">› &nbsp; Installation &amp; Repair</a></li>
+
                     <li><a href="contact.html">› &nbsp; Contact Us</a></li>
+
                 </ul>
+
             </div>
 
+
             <div>
+
                 <h4 class="footer-heading">Our Services</h4>
+
                 <ul class="footer-links">
-                    <li><a href="#ourServices">› &nbsp; Residential Fencing</a></li>
-                    <li><a href="#ourServices">› &nbsp; Wood Privacy Fencing</a></li>
-                    <li><a href="#ourServices">› &nbsp; Metal Fencing</a></li>
-                    <li><a href="#ourServices">› &nbsp; Gate Installation</a></li>
-                    <li><a href="#installationRepair">› &nbsp; Fence Repair</a></li>
-                    <li><a href="#ourProcess">› &nbsp; Our Process</a></li>
+
+                    <li><a href="services.html">› &nbsp; Residential Fencing</a></li>
+
+                    <li><a href="services.html">› &nbsp; Wood Privacy Fencing</a></li>
+
+                    <li><a href="services.html">› &nbsp; Metal Fencing</a></li>
+
+                    <li><a href="services.html">› &nbsp; Gate Installation</a></li>
+
+                    <li><a href="services.html">› &nbsp; Fence Repair</a></li>
+
+                    <li><a href="services.html">› &nbsp; Our Process</a></li>
+
                 </ul>
+
             </div>
+
 
             <div class="footer-newsletter">
+
                 <h4 class="footer-heading">Stay Connected</h4>
+
                 <p>
                     Subscribe for fencing ideas, property protection tips
                     and design inspiration from SecureFence.
                 </p>
 
                 <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" name="email"
-                           placeholder="Your email address"
-                           class="newsletter-input"
-                           aria-label="Your email address" required>
-                    <button type="submit" class="newsletter-btn"
-                            aria-label="Subscribe">
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email address"
+                        class="newsletter-input"
+                        aria-label="Your email address"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="newsletter-btn"
+                        aria-label="Subscribe"
+                    >
+
                         <i class="fa-solid fa-paper-plane"></i>
+
                     </button>
+
                 </form>
+
             </div>
 
         </div>
 
+
         <div class="footer-bottom">
+
             <p>
                 &copy; <span id="currentYear"></span>
                 SecureFence. All Rights Reserved.
             </p>
 
             <div class="legal-links">
+
                 <a href="privacy.html">Privacy Policy</a>
+
                 <a href="terms.html">Terms of Service</a>
+
                 <a href="contact.html">Contact</a>
+
             </div>
+
         </div>
 
     </div>
+
 </footer>
 
+
+<!-- =====================================================
+     PAGE JAVASCRIPT
+===================================================== -->
+
 <script>
-(() => {
-    const root = document.documentElement;
-    const themeBtn = document.getElementById("sfBlogTheme");
-    const directionBtn = document.getElementById("sfBlogDirection");
-    const menuBtn = document.getElementById("sfBlogMenu");
-    const links = document.getElementById("sfBlogLinks");
 
-    themeBtn.addEventListener("click", () => {
-        const isDark = root.getAttribute("data-theme") !== "dark";
-        root.setAttribute("data-theme", isDark ? "dark" : "light");
-        themeBtn.innerHTML = isDark
-            ? '<i class="fa-regular fa-sun"></i>'
-            : '<i class="fa-regular fa-moon"></i>';
-    });
+/*
+ IMPORTANT:
+ main.js is already connected.
+ This script handles only page-specific active navigation,
+ and footer year. Theme, RTL and mobile menu are handled
+ by the existing main.js to prevent duplicate events.
+*/
 
-    directionBtn.addEventListener("click", () => {
-        const isRTL = root.getAttribute("dir") !== "rtl";
-        root.setAttribute("dir", isRTL ? "rtl" : "ltr");
-        directionBtn.innerHTML = isRTL
-            ? '<i class="fa-solid fa-align-left"></i>'
-            : '<i class="fa-solid fa-align-right"></i>';
-    });
+document.addEventListener("DOMContentLoaded", function () {
 
-    menuBtn.addEventListener("click", () => {
-        const isOpen = links.classList.toggle("sf-blog-links-open");
-        menuBtn.innerHTML = isOpen
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
-        menuBtn.setAttribute("aria-expanded", String(isOpen));
-    });
+    /* CURRENT PAGE */
 
-    links.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            links.classList.remove("sf-blog-links-open");
-            menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            menuBtn.setAttribute("aria-expanded", "false");
+    const currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+    /* BLOG PAGE NAMES */
+
+    const blogPages = [
+        "blog.html",
+        "blog-details.html",
+        "blog-details",
+        "bd.html"
+    ];
+
+    /* BLOG ACTIVE STATE */
+
+    if (blogPages.includes(currentPage)) {
+
+        document.querySelectorAll(
+            '.nav-menu a[href="blog.html"], ' +
+            '.mobile-nav-list a[href="blog.html"]'
+        ).forEach(function (link) {
+
+            link.classList.add("active");
+
         });
-    });
 
-    document.getElementById("sfBlogYear").textContent =
-        new Date().getFullYear();
-})();
+    }
+
+    /* FOOTER YEAR */
+
+    const year = document.getElementById("currentYear");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+});
+
 </script>
 
 </body>

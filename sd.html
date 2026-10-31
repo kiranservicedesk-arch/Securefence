@@ -1198,6 +1198,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+    if (currentPage === "sd.html" || currentPage === "service-details.html") {
+
+        document.querySelectorAll('a.nav-link[href="services.html"]')
+            .forEach(function (link) {
+                link.classList.add("active");
+            });
+
+    }
+
+});
+</script>
 
 </body>
 </html>
